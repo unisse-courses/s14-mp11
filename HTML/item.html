@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="../CSS/Bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../CSS/item_style.css" rel="stylesheet" type="text/css">
+
+    <title>K-Penguin | Item</title>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container" id="brand">
+            <img src="../Media/brand_icon.png"></img>
+            <h1>K-Penguin</h1>
+        </div>
+        <div class="container" id="navbar">
+            <div class="row">
+                <div class="col-md-1.5"><a href="user.html">Home</a></div>
+                <div class="col-md-1.5"><a href="cart.html">Cart</a></div>
+                <div class="col-md-1.5"><a href="listArtists.html">Artists</a></div>
+                <div class="col-md-1.5"><a id="active" href="listItems.html">Items</a></div>
+                <div class="col-md-6"><input type="text" placeholder="Items..."></input><button onclick="window.location.href = 'results.html';" class="btn btn-default">Search</button></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <h1 id="itemName">Jennie Kim Jacket</h1>
+                    <h4 id="postedBy">| posted by <a id="username" href="user.html">@Asuna-</a></h4>
+                    <h3 id="price">Php 4500.00</h3>
+                    <h3 id="Status0">AVAILABLE</h3>
+                    <hr>
+                    <h2>Description</h2>
+                        <p id="description">Jennie Kim's merchandise Jacket EXCLUSIVE</p>
+                        <p><strong>Artist: </strong><a id="artist" href="artist.html">Jennie Kim</a></p>
+                        <p><strong>Item Type: </strong><a id="itemType" href="itemType.html">Clothing</a></p>
+                    <hr>
+                    <h2>Transaction Form</h2>
+                        <p class="help-block">Labels with (*) are required fields.</p>
+                        <form>
+                            <div class="form-group"><label>Recipient Name*</label><input id="recipientName" type="text" class="form-control" placeholder="Add Recipient Name"></div>
+                            <div class="form-group"><label>Zip Code*</label><input id="zipCode" type="email" class="form-control" placeholder="Add Zip Code"></div>
+                            <div class="form-group"><label>Delivery Address*</label><input id="inputAddress" type="text" class="form-control" placeholder="Add Delivery Address"></div>
+                            <div class="form-group"><label>Notes</label><textarea id="inputNotes" class="form-control" placeholder="Add Notes"></textarea></div>
+                            <div class="checkbox"><label><input type="checkbox"> I agree to <a href="#">K-Penguin's Terms of Privacy and Service</a>.</label></div>
+                            <!-- <button type="submit" class="btn btn-default">Submit</button> -->
+                            <input type ="button" onclick="window.location.href = 'cart.html';" class="btn btn-default" value="Submit">
+                        </form>
+                </div>
+                <div class="col-md-5">
+                    <img id="itemImage" src="../Media/photocard_jennie.jpg"></img>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../CSS/Bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

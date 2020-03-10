@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="../CSS/Bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../CSS/artist_style.css" rel="stylesheet" type="text/css">
+
+    <title>K-Penguin | Item Type</title>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container" id="brand">
+            <img src="../Media/brand_icon.png"></img>
+            <h1>K-Penguin</h1>
+        </div>
+        <div class="container" id="navbar">
+            <div class="row">
+                <div class="col-md-1.5"><a href="user.html">Home</a></div>
+                <div class="col-md-1.5"><a href="cart.html">Cart</a></div>
+                <div class="col-md-1.5"><a href="listArtists.html">Artists</a></div>
+                <div class="col-md-1.5"><a id="active" href="listItems.html">Items</a></div>
+                <div class="col-md-6"><input type="text" placeholder="Items..."></input><button onclick="window.location.href = 'results.html';" class="btn btn-default">Search</button></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="content">
+        <div class="container">
+            <h2>Items under <div id="itemType">Poster</div></h2>
+            <hr>
+            <div id="item" class="row">
+                <div class="col-md-3"><img id="thumbnail" src="../Media/Jennie_Kim_poster.jpg"></img></div>
+                <div class="col-md-9">
+                    <h3 id="itemName"><a href="item.html">BLACK PINK Poster (Jennie Kim)</a></h3>
+                    <p id="postedBy">| posted by <a id="username" href="user.html">@Asuna-</a></p>
+                    <p id="itemPrice">Php 500.00</p>
+                    <p id="itemStatus2">RESERVED</p>
+                    <p id="itemDescription">Black Pink Poster ft. Jennie Kim Size 24" x 36" EXCLUSIVE</p>
+                </div>
+            </div>
+            <div id="item" class="row">
+                <div class="col-md-3"><img id="thumbnail" src="../Media/twice_album.jpeg"></img></div>
+                <div class="col-md-9">
+                    <h3 id="itemName"><a href="item.html">Feel Special Poster (Twice)</a></h3>
+                    <p id="postedBy">| posted by <a id="username" href="user.html">@YaBoi_Gabriel</a></p>
+                    <p id="itemPrice">Php 450.00</p>
+                    <p id="itemStatus0">AVAILABLE</p>
+                    <p id="itemDescription">Twice Feel Special Album cover Poster Size 24" x 36" EXCLUSIVE</p>
+                </div>
+            </div>
+            <div id="item" class="row">
+                <div class="col-md-3"><img id="thumbnail" src="../Media/Dahyun_Poster.jpg"></img></div>
+                <div class="col-md-9">
+                    <h3 id="itemName"><a href="item.html">TWICE Poster (Dahyun)</a></h3>
+                    <p id="postedBy">| posted by <a id="username" href="user.html">@AkoSiBhozGab69</a></p>
+                    <p id="itemPrice">Php 500.00</p>
+                    <p id="itemStatus0">AVAILABLE</p>
+                    <p id="itemDescription">Twice Feel Special Poster ft. Dahyun Size 24" x 36" LIMITED EDITION</p>
+                </div>
+            </div>
+            <div id="item" class="row">
+                <div class="col-md-3"><img id="thumbnail" src="../Media/Mina_penguin_poster.jpg"></img></div>
+                <div class="col-md-9">
+                    <h3 id="itemName"><a href="item.html">TWICE Poster (Mina)</a></h3>
+                    <p id="postedBy">| posted by <a id="username" href="user.html">@jSunpaycoco</a></p>
+                    <p id="itemPrice">Php 999.00</p>
+                    <p id="itemStatus0">AVAILABLE</p>
+                    <p id="itemDescription">Twice Poster ft. Mina PENGUIN! Size 24" x 36" LIMITED EDITION</p>
+                </div>
+            </div>
+            <div id="item" class="row">
+                <div class="col-md-3"><img id="thumbnail" src="../Media/IU_poster.jpg"></img></div>
+                <div class="col-md-9">
+                    <h3 id="itemName"><a href="item.html">Poster (IU)</a></h3>
+                    <p id="postedBy">| posted by <a id="username" href="user.html">@IuFanBoy</a></p>
+                    <p id="itemPrice">Php 799.00</p>
+                    <p id="itemStatus1">UNAVAILABLE</p>
+                    <p id="itemDescription">Poster ft. Iu Size 24" x 36"</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../CSS/Bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

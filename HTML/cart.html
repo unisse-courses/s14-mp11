@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="../CSS/Bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../CSS/cart_style.css" rel="stylesheet" type="text/css">
+
+    <title>K-Penguin | Cart</title>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container" id="brand">
+            <img src="../Media/brand_icon.png"></img>
+            <h1>K-Penguin</h1>
+        </div>
+        <div class="container" id="navbar">
+            <div class="row">
+                <div class="col-md-1.5"><a href="user.html">Home</a></div>
+                <div class="col-md-1.5"><a id="active" href="cart.html">Cart</a></div>
+                <div class="col-md-1.5"><a href="listArtists.html">Artists</a></div>
+                <div class="col-md-1.5"><a href="listItems.html">Items</a></div>
+                <div class="col-md-6"><input type="text" placeholder="Items..."></input><button onclick="window.location.href = 'results.html';" class="btn btn-default">Search</button></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="content">
+        <div class="container">
+            <h1>Cart</h1>
+            <hr>
+            <div id="item" class="row">
+                <div class="col-md-3"><img id="thumbnail" src="../Media/photocard_jennie.jpg"></img></div>
+                <div class="col-md-7">
+                    <h3 id="itemName"><a href="item.html">Jennie Kim jacket</a></h3>
+                    <p id="postedBy">| posted by <a id="username" href="user.html">@Asuna-</a></p>
+                    <p id="itemPrice">Php 4500.00</p>
+                    <p id="itemStatus0">AVAILABLE</p>
+                    <p id="itemDescription">Jennie Kim's merchandise Jacket EXCLUSIVE</p>
+                </div>
+                <div class="col-md-2"><button type="submit" class="btn btn-danger">Remove from Cart</button></div>
+            </div>
+            <div id="item" class="row">
+                <div class="col-md-3"><img id="thumbnail" src="../Media/iphone11_case_jennie.jpg"></img></div>
+                <div class="col-md-7">
+                    <h3 id="itemName"><a href="item.html">Iphone 11 case Jennie Kim (96)</a></h3>
+                    <p id="postedBy">| posted by <a id="username" href="user.html">@Asuna-</a></p>
+                    <p id="itemPrice">Php 1100.00</p>
+                    <p id="itemStatus0">AVAILABLE</p>
+                    <p id="itemDescription">Iphone 11 case [Jennie Kim] BlackPink Jersey number 96</p>
+                </div>
+                <div class="col-md-2"><button type="submit" class="btn btn-danger">Remove from Cart</button></div>
+            </div>
+            <div id="item" class="row">
+                <div class="col-md-3"><img id="thumbnail" src="../Media/Jennie_Kim_jacket.jpg"></img></div>
+                <div class="col-md-7">
+                    <h3 id="itemName"><a href="item.html">Jennie Kim Photo card</a></h3>
+                    <p id="postedBy">| posted by <a id="username" href="user.html">@Asuna-</a></p>
+                    <p id="itemPrice">Php 300.00</p>
+                    <p id="itemStatus0">AVAILABLE</p>
+                    <p id="itemDescription">Jennie Kim Photo card Size 3.375″ x 2.125″</p>
+                </div>
+                <div class="col-md-2"><button type="submit" class="btn btn-danger">Remove from Cart</button></div>
+            </div>
+            <div id="item" class="row">
+                <div class="col-md-3"><img id="thumbnail" src="../Media/Jennie_Kim_poster.jpg"></img></div>
+                <div class="col-md-7">
+                    <h3 id="itemName"><a href="item.html">BLACK PINK Poster (Jennie Kim)</a></h3>
+                    <p id="postedBy">| posted by <a id="username" href="user.html">@Asuna-</a></p>
+                    <p id="itemPrice">Php 500.00</p>
+                    <p id="itemStatus2">RESERVED</p>
+                    <p id="itemDescription">Black Pink Poster ft. Jennie Kim Size 24" x 36" EXCLUSIVE</p>
+                </div>
+                <div class="col-md-2"><button type="submit" class="btn btn-danger">Remove from Cart</button></div>
+            </div>
+            <div id="item" class="row">
+                <div class="col-md-3"><img id="thumbnail" src="../Media/Jennie_Kim_Lipstick.jpg"></img></div>
+                <div class="col-md-7">
+                    <h3 id="itemName"><a href="item.html">Hera Lipstick Jennie Kim</a></h3>
+                    <p id="postedBy">| posted by <a id="username" href="user.html">@Asuna-</a></p>
+                    <p id="itemPrice">Php 1550.00</p>
+                    <p id="itemStatus0">AVAILABLE</p>
+                    <p id="itemDescription">Hera Lipstick Crimson Red color ft. Jennie Kim</p>
+                </div>
+                <div class="col-md-2"><button type="submit" class="btn btn-danger">Remove from Cart</button></div>
+            </div>
+            <hr>
+            <!-- <p><button type="submit" class="btn btn-success">Proceed to Checkout</button></p> -->
+            <p><input type ="button" onclick="window.location.href = 'user.html';" class="btn btn-success" value="Proceed to Checkout"></p>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../CSS/Bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

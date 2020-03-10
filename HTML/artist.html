@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="../CSS/Bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../CSS/artist_style.css" rel="stylesheet" type="text/css">
+
+    <title>K-Penguin | Artist: TWICE</title>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container" id="brand">
+            <img src="../Media/brand_icon.png"></img>
+            <h1>K-Penguin</h1>
+        </div>
+        <div class="container" id="navbar">
+            <div class="row">
+                <div class="col-md-1.5"><a href="user.html">Home</a></div>
+                <div class="col-md-1.5"><a href="cart.html">Cart</a></div>
+                <div class="col-md-1.5"><a id="active" href="listArtists.html">Artists</a></div>
+                <div class="col-md-1.5"><a href="listItems.html">Items</a></div>
+                <div class="col-md-6"><input type="text" placeholder="Items..."></input><button onclick="window.location.href = 'results.html';" class="btn btn-default">Search</button></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="content">
+        <div class="container">
+            <h1 id="artist" class="text-center">Twice</h1>
+            <hr>
+            <img id="artistImage" src="../Media/twice_profile.jpg"></img>
+            <hr>
+            <h2>Items under Twice</h2>
+            <br>
+            <div id="item" class="row">
+                <div class="col-md-3"><img id="thumbnail" src="../Media/twice_album.jpeg"></img></div>
+                <div class="col-md-9">
+                    <h3 id="itemName"><a href="item.html">TWICE Feel Special [A ver.]</a></h3>
+                    <p id="postedBy">| posted by <a id="username" href="user.html">@YaBoi_Gabriel</a></p>
+                    <p id="itemPrice">Php 1940.00</p>
+                    <p id="itemStatus0">AVAILABLE</p>
+                    <p id="itemDescription">'Feel Special' 8th Mini Album A Version CD+88p PhotoBook+Lyrics Paper+5p PhotoCard+1p Gold PhotoCard+Message PhotoCard SET+Tracking Kpop Sealed</p>
+                </div>
+            </div>
+            <div id="item" class="row">
+                <div class="col-md-3"><img id="thumbnail" src="../Media/twice_card.jpg"></img></div>
+                <div class="col-md-9">
+                    <h3 id="itemName"><a href="item.html">TWICE Transparent Card</a></h3>
+                    <p id="postedBy">| posted by <a id="username" href="user.html">@AnjeLodicakes</a></p>
+                    <p id="itemPrice">Php 410.00</p>
+                    <p id="itemStatus2">RESERVED</p>
+                    <p id="itemDescription">TRANSPARENT PHOTO CARDS 25pcs [FAN GOODS] by JYP Entertainment</p>
+                </div>
+            </div>
+            <div id="item" class="row">
+                <div class="col-md-3"><img id="thumbnail" src="../Media/twice_album2.jpg"></img></div>
+                <div class="col-md-9">
+                    <h3 id="itemName"><a href="item.html">TWICE [YES or YES] CD</a></h3>
+                    <p id="postedBy">| posted by <a id="username" href="user.html">@AnjeLodicakes</a></p>
+                    <p id="itemPrice">Php 1262.00</p>
+                    <p id="itemStatus1">UNAVAILABLE</p>
+                    <p id="itemDescription">[YES or YES] 6th Mini Album RANDOM CD+POSTER+PhotoBook+5p PhotoCard+1p Yes or Yes Card+Pre-Order Item+Tracking Number K-POP SEALED</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../CSS/Bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="../CSS/Bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <link href="../CSS/itemAdd_style.css" rel="stylesheet" type="text/css">
+
+    <title>K-Penguin | Add Item</title>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container" id="brand">
+            <img src="../Media/brand_icon.png"></img>
+            <h1>K-Penguin</h1>
+        </div>
+        <div class="container" id="navbar">
+            <div class="row">
+                <div class="col-md-1.5"><a href="user.html">Home</a></div>
+                <div class="col-md-1.5"><a href="cart.html">Cart</a></div>
+                <div class="col-md-1.5"><a href="listArtists.html">Artists</a></div>
+                <div class="col-md-1.5"><a id="active" href="listItems.html">Items</a></div>
+                <div class="col-md-6"><input type="text" placeholder="Items..."></input><button onclick="window.location.href = 'results.html';" class="btn btn-default">Search</button></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="content">
+        <div class="container">
+            <h1>Add Item</h1>
+            <p class="help-block">Labels with (*) are required fields.</p>
+            <hr>
+        <form>
+            <div class="form-group"><label>Product Name*</label><input id="productName" type="text" class="form-control" placeholder="Add Product Name"></div>
+            <div class="form-group"><label>Price (in Philippine Peso)*</label><input id="price" type="text" class="form-control" placeholder="Add Price"></div>
+            <div class="form-group"><label>Artist*</label><input id="artist" type="text" class="form-control" placeholder="Add Artist"></div> 
+            <div class="form-group"><label>Item Type*</label><input id="itemType" type="text" class="form-control" placeholder="Add Item Type"></div> 
+            <div class="form-group"><label>Description*</label><textarea id="description" class="form-control" placeholder="Add Description"></textarea></div>
+            <div class="form-group"><label>Upload Item Image*</label><input type="file"><p class="help-block">Only photos in .png and .jpg format are allowed.</p></div>
+            <hr> 
+            <!-- <button type="submit" class="btn btn-default">Add Item</button> -->
+            <input type ="button" onclick="window.location.href = 'user.html';" class="btn btn-default" value="Add Item">
+        </form>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="../CSS/Bootstrap/js/bootstrap.min.js"></script>
+</body>
+</html>
