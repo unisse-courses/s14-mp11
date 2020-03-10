@@ -21,6 +21,7 @@
             <div class="row">
                 <div class="col-md-1.5"><a href="user.html">Home</a></div>
                 <div class="col-md-1.5"><a id="active" href="cart.html">Cart</a></div>
+                <div class="col-md-1.5"><a href="transactions.html">Transactions</a></div>
                 <div class="col-md-1.5"><a href="listArtists.html">Artists</a></div>
                 <div class="col-md-1.5"><a href="listItems.html">Items</a></div>
                 <div class="col-md-6"><input type="text" placeholder="Items..."></input><button onclick="window.location.href = 'results.html';" class="btn btn-default">Search</button></div>
@@ -33,10 +34,10 @@
             <h1>Cart</h1>
             <hr>
             <div id="item" class="row">
-                <div class="col-md-3"><img id="thumbnail" src="../Media/photocard_jennie.jpg"></img></div>
+                <div class="col-md-3"><img id="itemImage" src="../Media/photocard_jennie.jpg"></img></div>
                 <div class="col-md-7">
                     <h3 id="itemName"><a href="item.html">Jennie Kim jacket</a></h3>
-                    <p id="postedBy">| posted by <a id="username" href="user.html">@Asuna-</a></p>
+                    <p id="postedBy">| posted by <a id="itemUser" href="user.html">@Asuna-</a></p>
                     <p id="itemPrice">Php 4500.00</p>
                     <p id="itemStatus0">AVAILABLE</p>
                     <p id="itemDescription">Jennie Kim's merchandise Jacket EXCLUSIVE</p>
@@ -44,10 +45,10 @@
                 <div class="col-md-2"><button type="submit" class="btn btn-danger">Remove from Cart</button></div>
             </div>
             <div id="item" class="row">
-                <div class="col-md-3"><img id="thumbnail" src="../Media/iphone11_case_jennie.jpg"></img></div>
+                <div class="col-md-3"><img id="itemImage" src="../Media/iphone11_case_jennie.jpg"></img></div>
                 <div class="col-md-7">
                     <h3 id="itemName"><a href="item.html">Iphone 11 case Jennie Kim (96)</a></h3>
-                    <p id="postedBy">| posted by <a id="username" href="user.html">@Asuna-</a></p>
+                    <p id="postedBy">| posted by <a id="itemUser" href="user.html">@Asuna-</a></p>
                     <p id="itemPrice">Php 1100.00</p>
                     <p id="itemStatus0">AVAILABLE</p>
                     <p id="itemDescription">Iphone 11 case [Jennie Kim] BlackPink Jersey number 96</p>
@@ -55,10 +56,10 @@
                 <div class="col-md-2"><button type="submit" class="btn btn-danger">Remove from Cart</button></div>
             </div>
             <div id="item" class="row">
-                <div class="col-md-3"><img id="thumbnail" src="../Media/Jennie_Kim_jacket.jpg"></img></div>
+                <div class="col-md-3"><img id="itemImage" src="../Media/Jennie_Kim_jacket.jpg"></img></div>
                 <div class="col-md-7">
                     <h3 id="itemName"><a href="item.html">Jennie Kim Photo card</a></h3>
-                    <p id="postedBy">| posted by <a id="username" href="user.html">@Asuna-</a></p>
+                    <p id="postedBy">| posted by <a id="itemUser" href="user.html">@Asuna-</a></p>
                     <p id="itemPrice">Php 300.00</p>
                     <p id="itemStatus0">AVAILABLE</p>
                     <p id="itemDescription">Jennie Kim Photo card Size 3.375″ x 2.125″</p>
@@ -66,10 +67,10 @@
                 <div class="col-md-2"><button type="submit" class="btn btn-danger">Remove from Cart</button></div>
             </div>
             <div id="item" class="row">
-                <div class="col-md-3"><img id="thumbnail" src="../Media/Jennie_Kim_poster.jpg"></img></div>
+                <div class="col-md-3"><img id="itemImage" src="../Media/Jennie_Kim_poster.jpg"></img></div>
                 <div class="col-md-7">
                     <h3 id="itemName"><a href="item.html">BLACK PINK Poster (Jennie Kim)</a></h3>
-                    <p id="postedBy">| posted by <a id="username" href="user.html">@Asuna-</a></p>
+                    <p id="postedBy">| posted by <a id="itemUser" href="user.html">@Asuna-</a></p>
                     <p id="itemPrice">Php 500.00</p>
                     <p id="itemStatus2">RESERVED</p>
                     <p id="itemDescription">Black Pink Poster ft. Jennie Kim Size 24" x 36" EXCLUSIVE</p>
@@ -77,10 +78,10 @@
                 <div class="col-md-2"><button type="submit" class="btn btn-danger">Remove from Cart</button></div>
             </div>
             <div id="item" class="row">
-                <div class="col-md-3"><img id="thumbnail" src="../Media/Jennie_Kim_Lipstick.jpg"></img></div>
+                <div class="col-md-3"><img id="itemImage" src="../Media/Jennie_Kim_Lipstick.jpg"></img></div>
                 <div class="col-md-7">
                     <h3 id="itemName"><a href="item.html">Hera Lipstick Jennie Kim</a></h3>
-                    <p id="postedBy">| posted by <a id="username" href="user.html">@Asuna-</a></p>
+                    <p id="postedBy">| posted by <a id="itemUser" href="user.html">@Asuna-</a></p>
                     <p id="itemPrice">Php 1550.00</p>
                     <p id="itemStatus0">AVAILABLE</p>
                     <p id="itemDescription">Hera Lipstick Crimson Red color ft. Jennie Kim</p>
@@ -88,8 +89,15 @@
                 <div class="col-md-2"><button type="submit" class="btn btn-danger">Remove from Cart</button></div>
             </div>
             <hr>
-            <!-- <p><button type="submit" class="btn btn-success">Proceed to Checkout</button></p> -->
-            <p><input type ="button" onclick="window.location.href = 'user.html';" class="btn btn-success" value="Proceed to Checkout"></p>
+            <h2>Checkout</h2>
+                <p class="help-block">Labels with (*) are required fields.</p>
+                    <form>
+                        <div class="form-group"><label>Recipient Name*</label><input id="inputName" type="text" class="form-control" placeholder="Add Recipient Name"></div>
+                        <div class="form-group"><label>Delivery Address*</label><input id="inputAddress" type="text" class="form-control" placeholder="Add Delivery Address"></div>
+                        <div class="form-group"><label>Notes</label><textarea id="inputNotes" class="form-control" placeholder="Add Notes"></textarea></div>
+                        <div class="checkbox"><label><input id="inputCheckbox" type="checkbox"> I agree to <a href="#">K-Penguin's Terms of Privacy and Service</a>.</label></div>
+                    </form>
+                <p><input type ="button" onclick="window.location.href = 'transactions.html';" class="btn btn-success" value="Confirm"></p>
         </div>
     </div>
 

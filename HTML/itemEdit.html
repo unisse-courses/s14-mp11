@@ -19,10 +19,11 @@
         </div>
         <div class="container" id="navbar">
             <div class="row">
-                <div class="col-md-1.5"><a href="user.html">Home</a></div>
+                <div class="col-md-1.5"><a id="active" href="user.html">Home</a></div>
                 <div class="col-md-1.5"><a href="cart.html">Cart</a></div>
+                <div class="col-md-1.5"><a href="transactions.html">Transactions</a></div>
                 <div class="col-md-1.5"><a href="listArtists.html">Artists</a></div>
-                <div class="col-md-1.5"><a id="active" href="listItems.html">Items</a></div>
+                <div class="col-md-1.5"><a href="listItems.html">Items</a></div>
                 <div class="col-md-6"><input type="text" placeholder="Items..."></input><button onclick="window.location.href = 'results.html';" class="btn btn-default">Search</button></div>
             </div>
         </div>
@@ -34,19 +35,33 @@
             <p class="help-block">Labels with (*) are required fields.</p>
             <hr>
         <form>
-            <div class="form-group"><label>Product Name*</label><input id="productName" type="text" class="form-control" value="Edit Product Name"></div>
-            <div class="form-group"><label>Price (in Philippine Peso)*</label><input id="productPrice" type="text" class="form-control" value="Edit Price"></div>
-            <div class="form-group"><label>Status</label><select id="productStatus" class="form-control"><option value="available">Available</option><option value="reserved">Reserved</option><option value="notAvailable">Not Available</option></select></div>
-            <div class="form-group"><label>Artist*</label><input id="artist" type="text" class="form-control" value="Edit Artist"></div> 
-            <div class="form-group"><label>Item Type*</label><input id="itemType" type="text" class="form-control" value="Edit Item Type"></div> 
-            <div class="form-group"><label>Description*</label><textarea id="productDescription" class="form-control" value="Edit Description"></textarea></div>
-            <div class="form-group"><label>Upload Item Photo*</label><input id="productImage" type="file"><p class="help-block">Only photos in .png and .jpg format are allowed.</p></div>
-            <hr> 
-            <!-- <button type="submit" class="btn btn-default">Apply Changes</button> -->
+            <div class="form-group"><label>Item Name*</label><input id="itemName" type="text" class="form-control" value="Edit Product Name"></div>
+            <div class="form-group"><label>Price (in Philippine Peso)*</label><input id="itemPrice" type="text" class="form-control" value="Edit Price"></div>
+            <div class="form-group"><label>Status*</label>
+                <select id="itemStatus" class="form-control">
+                <option value="available">Available</option>
+                <option value="reserved">Reserved</option>
+                <option value="notAvailable">Not Available</option>
+                </select>
+            </div>
+            <div class="form-group"><label>Artist*</label><input id="itemArtist" type="text" class="form-control" value="Edit Artist"></div> 
+            <div class="form-group"><label>Item Type*</label>
+                <select id="itemType" class="form-control">
+                <option value="albums">Albums</option>
+                <option value="apparel">Apparel</option>
+                <option value="books">Books</option>
+                <option value="lightsticks">Lightsticks</option>
+                <option value="photocards">Photocards</option>
+                <option value="posters">Posters</option>
+                <option value="others">Others</option>
+                </select>
+            </div>
+            <div class="form-group"><label>Description*</label><textarea id="itemDescription" class="form-control" value="Edit Description"></textarea></div>
+            <div class="form-group"><label>Upload Item Image*</label><input id="itemImage" type="file"><p class="help-block">Only photos in .png and .jpg format are allowed.</p></div>
+            <hr>
             <input type ="button" onclick="window.location.href = 'user.html';" class="btn btn-default" value="Apply Changes">
             <hr>
-            <!-- <button type="submit" class="btn btn-danger">Delete Item</button> -->
-            <input type ="button" onclick="window.location.href = 'user.html';" class="btn btn-danger" value="Delete Item">
+            <p><input type ="button" onclick="window.location.href = 'user.html';" class="btn btn-danger" value="Delete Item"></p>
         </form>
         </div>
     </div>
