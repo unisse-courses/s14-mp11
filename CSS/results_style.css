@@ -83,6 +83,10 @@
 
 /* Content */
 
+body{
+    font-family: "Montserrat";
+}
+
 #postedBy{
     color: gray;
     margin-top: -10px;
@@ -107,13 +111,13 @@
 }
 
 #itemStatus2{
-    color: rgb(255, 153, 0);
+    color: orange;
     margin-top: -8px;
 }
 
-#thumbnail{
-    max-width: 80%;
-    max-height: 80%;
+#itemImage{
+    height: 200px;
+    width: 200px;
     display: block;
     margin: auto;
 }

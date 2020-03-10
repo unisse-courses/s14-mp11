@@ -83,6 +83,10 @@
 
 /* Content */
 
+body{
+    font-family: "Montserrat";
+}
+
 #postedBy{
     color: gray;
     margin-top: -10px;
@@ -111,9 +115,9 @@
     margin-top: -8px;
 }
 
-#thumbnail{
-    max-width: 80%;
-    max-height: 80%;
+#itemImage{
+    height: 200px;
+    width: 200px;
     display: block;
     margin: auto;
 }
@@ -123,10 +127,11 @@
 }
 
 #userImage{
-    position: relative;
-    width: 200px;
-    height: 200px;
-    overflow: hidden;
+    width: 250px;
+    height: 250px;
     border-radius: 50%;
-    left: 10%;
+    margin: 20px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
 }

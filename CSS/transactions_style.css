@@ -87,22 +87,43 @@ body{
     font-family: "Montserrat";
 }
 
+#orderedBy{
+    color: gray;
+    margin-top: -10px;
+}
+
+#orderAddress{
+    margin-top: -10px;
+}
+
+#orderNotes{
+    margin-top: -10px;
+}
+
 #postedBy{
     color: gray;
     margin-top: -10px;
 }
 
-#item{
-    margin-bottom: 20px;
+#purchaseAddress{
+    margin-top: -10px;
+}
+
+#purchaseNotes{
+    margin-top: -10px;
+}
+
+#order{
+    margin-bottom: 25px;
+}
+
+#purchase{
+    margin-bottom: 25px;
 }
 
 #itemPrice{
+    margin-top: -10px;
     color: green;
-}
-
-#itemStatus{
-    color: green;
-    margin-top: -8px;
 }
 
 #itemImage{
@@ -110,19 +131,4 @@ body{
     width: 200px;
     display: block;
     margin: auto;
-}
-
-#itemStatus0{
-    color: green;
-    margin-top: -8px;
-}
-
-#itemStatus1{
-    color: red;
-    margin-top: -8px;
-}
-
-#itemStatus2{
-    color: orange;
-    margin-top: -8px;
 }

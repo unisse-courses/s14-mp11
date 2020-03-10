@@ -83,28 +83,32 @@
 
 /* Content */
 
+body{
+    font-family: "Montserrat";
+}
+
 #postedBy{
     font-size: 20px;
     color: gray;
     margin-top: -10px;
 }
 
-#price{
+#itemPrice{
     color: green;
 }
 
 
-#Status0{
+#itemStatus0{
     color: green;
     margin-top: -8px;
 }
 
-#Status1{
+#itemStatus1{
     color: red;
     margin-top: -8px;
 }
 
-#Status2{
+#itemStatus2{
     color: rgb(255, 255, 0);
     margin-top: -8px;
 }
