@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-    <link href="../CSS/list_style.css" rel="stylesheet" type="text/css">
+    <link href="./styles/item_style.css" rel="stylesheet" type="text/css">
 
-    <title>K-Penguin | Artists</title>
+    <title>K-Penguin | Item</title>
 </head>
 
 <body>
@@ -29,18 +29,27 @@
         </div>
     </div>
 
-    <div id="content" class="container">
-        <h1>Items</h1>
-        <hr>
-        <ul>
-            <li><a href="itemType.html">Albums</a></li>
-            <li><a href="itemType.html">Apparel</a></li>
-            <li><a href="itemType.html">Books</a></li>
-            <li><a href="itemType.html">Lightsticks</a></li>
-            <li><a href="itemType.html">Photocards</a></li>
-            <li><a href="itemType.html">Posters</a></li>
-            <li><a href="itemType.html">Others</a></li>
-        </ul>
+    <div id="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <h1 id="itemName">Jennie Kim Jacket</h1>
+                    <h4 id="postedBy">| posted by <a id="itemUser" href="user.html">@Asuna-</a></h4>
+                    <h3 id="itemPrice">Php 4500.00</h3>
+                    <h3 id="itemStatus0">AVAILABLE</h3>
+                    <hr>
+                    <h2>Description</h2>
+                        <p id="itemDescription">Jennie Kim's merchandise Jacket EXCLUSIVE</p>
+                        <p><strong>Artist: </strong><a id="itemArtist" href="artist.html">Jennie Kim</a></p>
+                        <p><strong>Item Type: </strong><a id="itemType" href="itemType.html">Clothing</a></p>
+                    <hr>
+                    <input type ="button" onclick="window.location.href = 'cart.html';" class="btn btn-success" value="Add to Cart">
+                </div>
+                <div class="col-md-5">
+                    <img id="itemImage" src="../Media/photocard_jennie.jpg"></img>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
