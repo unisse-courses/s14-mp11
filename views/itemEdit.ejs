@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link href="css/itemEdit_style.css" rel="stylesheet" type="text/css">
+
+    <title><%= title %></title>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container" id="brand">
+            <img src="img/brand_icon.png"></img>
+            <h1>K-Penguin</h1>
+        </div>
+        <div class="container" id="navbar">
+            <div class="row">
+                <div class="col-md-1.5"><a id="active" href="/profile">Home</a></div>
+                <div class="col-md-1.5"><a href="/cart">Cart</a></div>
+                <div class="col-md-1.5"><a href="/transactions">Transactions</a></div>
+                <div class="col-md-1.5"><a href="/artists">Artists</a></div>
+                <div class="col-md-1.5"><a href="/item_types">Items</a></div>
+                <div class="col-md-6"><input type="text" placeholder="Items..."></input><button onclick="window.location.href = '/results';" class="btn btn-default">Search</button></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="content">
+        <div class="container">
+            <h1>Edit Item</h1>
+            <p class="help-block">Labels with (*) are required fields.</p>
+            <hr>
+        <form>
+            <div class="form-group"><label>Item Name*</label><input id="itemName" type="text" class="form-control" value="Edit Product Name"></div>
+            <div class="form-group"><label>Price (in Philippine Peso)*</label><input id="itemPrice" type="text" class="form-control" value="Edit Price"></div>
+            <div class="form-group"><label>Status*</label>
+                <select id="itemStatus" class="form-control">
+                <option value="available">Available</option>
+                <option value="reserved">Reserved</option>
+                <option value="notAvailable">Not Available</option>
+                </select>
+            </div>
+            <div class="form-group"><label>Artist*</label><input id="itemArtist" type="text" class="form-control" value="Edit Artist"></div> 
+            <div class="form-group"><label>Item Type*</label>
+                <select id="itemType" class="form-control">
+                <option value="albums">Albums</option>
+                <option value="apparel">Apparel</option>
+                <option value="books">Books</option>
+                <option value="lightsticks">Lightsticks</option>
+                <option value="photocards">Photocards</option>
+                <option value="posters">Posters</option>
+                <option value="others">Others</option>
+                </select>
+            </div>
+            <div class="form-group"><label>Description*</label><textarea id="itemDescription" class="form-control" value="Edit Description"></textarea></div>
+            <div class="form-group"><label>Upload Item Image*</label><input id="itemImage" type="file"><p class="help-block">Only photos in .png and .jpg format are allowed.</p></div>
+            <hr>
+            <input type ="button" onclick="window.location.href = '/item';" class="btn btn-default" value="Apply Changes">
+            <hr>
+            <p><input type ="button" onclick="window.location.href = '/profile';" class="btn btn-danger" value="Delete Item"></p>
+        </form>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+</body>
+</html>

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link href="css/user_style.css" rel="stylesheet" type="text/css">
+
+    <title><%= title %></title>
+</head>
+
+<body>
+    <div id="header">
+        <div class="container" id="brand">
+            <img src="img/brand_icon.png"></img>
+            <h1>K-Penguin</h1>
+        </div>
+        <div class="container" id="navbar">
+            <div class="row">
+                <div class="col-md-1.5"><a id="active" href="/profile">Home</a></div>
+                <div class="col-md-1.5"><a href="/cart">Cart</a></div>
+                <div class="col-md-1.5"><a href="/transactions">Transactions</a></div>
+                <div class="col-md-1.5"><a href="/artists">Artists</a></div>
+                <div class="col-md-1.5"><a href="/item_types">Items</a></div>
+                <div class="col-md-6"><input type="text" placeholder="Items..."></input><button onclick="window.location.href = '/results';" class="btn btn-default">Search</button></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="content">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7">
+                    <h1 id="name">Yuuki Asuna</h1>
+                    <h4 id="username">@Asuna-</h4>
+                    <hr>
+                    <h2>Description</h2>
+                        <p id="userDescription">ARMY ~ ONCE ~ BLINK ~ ALL IN ONE K-POP LOVER<br> CHECK OUT MY PROFILE FOR 
+                        MORE MERCH!!!</p>
+                    <hr>
+                    <p><button onclick="window.location.href = '/edit_profile';" type="submit" class="btn btn-default">Edit Profile</button>
+                        <button onclick="window.location.href = '/add_item';" type="submit" class="btn btn-default">Add Item</button>
+                    </p>
+                </div>
+                <div class="col-md-5">
+                    <img id="userImage" src="img/asuna_user.jpg"></img>
+                </div>
+            </div>
+            <hr>
+            <h2>Items</h2>
+                <div id="item" class="row">
+                    <div class="col-md-3"><img id="itemImage" src="img/bts_calendar.jpg"></img></div>
+                    <div class="col-md-7">
+                        <h3 id="itemName"><a href="/item">BTS OFFICIAL 2020 12 x 14 Inch Monthly Deluxe Wall Calendar</a></h3>
+                        <p id="itemPrice">Php 619.84</p>
+                        <p id="itemStatus0">AVAILABLE</p>
+                        <p id="itemDescription">16-month calendar, beginning with a bonus spread of the final four months of preceding year<br>
+                            Large, Roomy Day Blocks - All major holidays and moon phases listed, with plenty of room for writing notes and appointments<br>
+                            Specifications - 16-months (two-page layout September-December 2019, and January-December 2020); 14" x 24" (open); 28 pages</p>
+                    </div>
+                    <div class="col-md-2">
+                        <p><button onclick="window.location.href = '/edit_item';" type="submit" class="btn btn-default">Edit Item</button>
+                        </p>
+                    </div>
+                </div>
+                <div id="item" class="row">
+                    <div class="col-md-3"><img id="itemImage" src="img/bts_jacket.jpg"></img></div>
+                    <div class="col-md-7">
+                        <h3 id="itemName"><a href="/item">BTS Love Yourself Hoodie</a></h3>
+                        <p id="itemPrice">Php 1020.31</p>
+                        <p id="itemStatus0">AVAILABLE</p>
+                        <p id="itemDescription">Kpop BTS 2017 New Logo Hoodie<br>
+                            Material:cotton blend and comfortable to sport<br>
+                            100% Brand New And High Quality</p>
+                    </div>
+                    <div class="col-md-2">
+                        <p><button onclick="window.location.href = '/edit_item';" type="submit" class="btn btn-default">Edit Item</button>
+                        </p>
+                    </div>
+                </div>
+                <div id="item" class="row">
+                    <div class="col-md-3"><img id="itemImage" src="img/mamamoo_album1.jpg"></img></div>
+                    <div class="col-md-7">
+                        <h3 id="itemName"><a href="/item">Jennie Kim Photo card</a></h3>
+                        <p id="itemPrice">Php 300.00</p>
+                        <p id="itemStatus1">UNAVAILABLE</p>
+                        <p id="itemDescription">JENNIE KIM BLACKPINK PHOTOSHOOT OFFICIAL PHOTOCARD YG ENTERTAINMENT BLINKS FAN MERCHANDISE</p>
+                    </div>
+                    <div class="col-md-2">
+                        <p><button onclick="window.location.href = '/edit_item';" type="submit" class="btn btn-default">Edit Item</button>
+                        </p>
+                    </div>
+                </div>
+                <div id="item" class="row">
+                    <div class="col-md-3"><img id="itemImage" src="img/twice_album2.jpg"></img></div>
+                    <div class="col-md-7">
+                        <h3 id="itemName"><a href="/item">TWICE [YES or YES] CD</a></h3>
+                        <p id="itemPrice">Php 1262.00</p>
+                        <p id="itemStatus2">RESERVED</p>
+                        <p id="itemDescription">[YES or YES] 6th Mini Album RANDOM CD+POSTER+PhotoBook+5p PhotoCard+1p Yes or Yes Card+Pre-Order Item+Tracking Number K-POP SEALED</p>
+                    </div>
+                    <div class="col-md-2">
+                        <p><button onclick="window.location.href = '/edit_item';" type="submit" class="btn btn-default">Edit Item</button>
+                        </p>
+                    </div>
+                </div>
+                <div id="item" class="row">
+                    <div class="col-md-3"><img id="itemImage" src="img/twice_album.jpeg"></img></div>
+                    <div class="col-md-7">
+                        <h3 id="itemName"><a href="/item">TWICE Feel Special [A ver.]</a></h3>
+                        <p id="itemPrice">Php 1940.00</p>
+                        <p id="itemStatus0">AVAILABLE</p>
+                        <p id="itemDescription">'Feel Special' 8th Mini Album A Version CD+88p PhotoBook+Lyrics Paper+5p PhotoCard+1p Gold PhotoCard+Message PhotoCard SET+Tracking Kpop Sealed</p>
+                    </div>
+                    <div class="col-md-2">
+                        <p><button onclick="window.location.href = '/edit_item';" type="submit" class="btn btn-default">Edit Item</button>
+                        </p>
+                    </div>
+                </div>
+            <hr>
+            <h2>Reviews</h2>
+                <form>
+                    <div class="form-group"><textarea id="inputReview" class="form-control" placeholder="Add a Review"></textarea></div>
+                    <button type="submit" class="btn btn-default">Review</button>
+                </form>
+                <br>
+                <div class="review">
+                    <p><strong><a id="reviewUser" href="/profile">@yaBoi_Gab</a></strong><br>
+                        I did not get a chaeyoung card :/ really a bummer &#128078;&#128078;&#128078;
+                    delivered on time though</p>
+                </div>
+                <div class="review">
+                    <p><strong><a id="reviewUser" href="/profile">@tummyBuns98</a></strong><br>
+                        I really love the feel special comeback a lot. The title track and all the b-sides are amazing and wonderful. 
+                        The girls look so beautiful and gorgeous. In this album you get a poster, 10 pre order cards, lyric book, photo book, cd, and 
+                        5 photocards. But my poster was a tiny bit damaged. It had a few dents. And the album itself has tiny dents which i don’t mind at all. 
+                        But i ordered this on Sep 14 and the comeback was the 23. So I had to wait quite a while for it to come. The shipping took forever and I 
+                        hated that. You also get two free gifts.</p>
+                </div>
+                <div class="review">
+                    <p><strong><a id="reviewUser" href="/profile">@SamLincon</a></strong><br>
+                        Shipping does take quite awhile but it fits well...I recommend you do order the bts jacket a size up from your usual size..
+                        I usually wear a 2x-3x so i ordered a 4x for more room. Its a great buy don’t be afraid to order it because of your size </p>
+                </div>
+                <div class="review">
+                    <p><strong><a id="reviewUser" href="/profile">@tHeEaRtHiSfLaT</a></strong><br>
+                        I bought the photocard for my sister's Christmas present as she's a longtime blink and Jennie is her bias. 
+                        I have always been a bit skeptical about kpop merch as they get pretty pricey. But it was definitely worth it! 
+                        </p>
+                </div>
+                <div class="review">
+                    <p><strong><a id="reviewUser" href="/profile">@kiritoNiiSan143</a></strong><br>
+                    +rep item delivered in good shape</p>
+                </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js" integrity="sha384-aJ21OjlMXNL5UyIl/XNwTMqvzeRMZH2w8c5cRVpzpU8Y5bApTppSuUkhZXN0VxHd" crossorigin="anonymous"></script>
+</body>
+</html>

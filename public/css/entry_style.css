@@ -1,0 +1,28 @@
+@font-face{
+    font-family: "Ryder";
+    src: url(../fonts/black-ryder/BlackRyderDemo.otf);
+}
+
+@font-face{
+    font-family: "Montserrat";
+    src: url(../fonts/montserrat/Montserrat-Regular.ttf);
+}
+
+body{
+    width: 100%;
+    font-family: "Montserrat";
+}
+
+img{
+    height: 250px;
+    width: 250px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h1{
+    font-family: "Ryder";
+    color: #41B6E6;
+    font-size: 80px;
+}
