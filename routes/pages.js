@@ -11,9 +11,17 @@ module.exports = {
         });
     },
 
-    entryPage: (req, res) => {
-        res.render('entry.ejs', {
-            title: "K-Penguin | Welcome!"
+    registerPage: (req, res) => {
+        res.render('register.ejs', {
+            title: "K-Penguin | Welcome!",
+            error: ""
+        });
+    },
+
+    loginPage: (req, res) => {
+        res.render('login.ejs', {
+            title: "K-Penguin | Welcome!",
+            error: ""
         });
     },
 

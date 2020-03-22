@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-    <link href="/css/list_style.css" rel="stylesheet" type="text/css">
+    <link href="/css/itemEdit_style.css" rel="stylesheet" type="text/css">
 
     <title><%= title %></title>
 </head>
@@ -19,24 +19,36 @@
         </div>
         <div class="container" id="navbar">
             <div class="row">
-                <div class="col-md-1.5"><a href="/user/<%= currentUser._id %>">Home</a></div>
+                <div class="col-md-1.5"><a id="active" href="/user/<%= currentUser._id %>">Home</a></div>
                 <div class="col-md-1.5"><a href="/transactions">Transactions</a></div>
                 <div class="col-md-1.5"><a href="/artists">Artists</a></div>
-                <div class="col-md-1.5"><a id="active" href="/items">Items</a></div>
+                <div class="col-md-1.5"><a href="/items">Items</a></div>
                 <div class="col-md-6"><input type="text" placeholder="Items..."></input><button onclick="window.location.href = '/results';" class="btn btn-default">Search</button></div>
             </div>
         </div>
     </div>
 
-    <div id="content" class="container">
-        <h1 class="text-center">Items</h1>
-        <hr>
-        <h3 id="error" class="text-center"><%= error %></h3>
-        <ul>
-            <% for(var i = 0; i < itemTypes.length; i++) {%>
-                <li><a href="/item_type/<%= itemTypes[i].toLowerCase() %>"><%= itemTypes[i].toUpperCase() %></a></li>
-            <% } %>
-        </ul>
+    <div id="content">
+        <div class="container">
+            <h1>Delete Item</h1>
+            <hr>
+            <div id="item" class="row">
+                <div class="col-md-3"><img id="itemImage" src="/img/twice_album.jpeg"></img></div>
+                <div class="col-md-7">
+                    <h3 id="itemName"><a href="/item/<%= item._id %><"><%= item.name %></a></h3>
+                    <p id="itemPrice"><%= item.price %></p>
+                    <p id="<%= item.status %>"><%= item.status.toUpperCase() %></p>
+                    <p id="itemDescription"><%= item.description %></p>
+                </div>
+            </div>
+            <hr>
+        <form method="post">
+            <div class="form-group"><label>Enter your password to proceed with deletion:</label><input name="password" type="password" class="form-control"></div>
+            <p id="error"><%= error %></p>
+            <hr>
+            <p><input type="submit" class="btn btn-danger" value="Delete Item"></p>
+        </form>
+        </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>

@@ -100,18 +100,18 @@ body{
     color: green;
 }
 
-#itemStatus0{
+#available{
     color: green;
     margin-top: -8px;
 }
 
-#itemStatus1{
+#notAvailable{
     color: red;
     margin-top: -8px;
 }
 
-#itemStatus2{
-    color: rgb(255, 153, 0);
+#reserved{
+    color: orange;
     margin-top: -8px;
 }
 

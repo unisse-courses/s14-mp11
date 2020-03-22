@@ -26,3 +26,9 @@ h1{
     color: #41B6E6;
     font-size: 80px;
 }
+
+/* Content */
+
+#error{
+    color: red;
+}

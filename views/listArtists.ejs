@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-    <link href="css/list_style.css" rel="stylesheet" type="text/css">
+    <link href="/css/list_style.css" rel="stylesheet" type="text/css">
 
     <title><%= title %></title>
 </head>
@@ -14,30 +14,28 @@
 <body>
     <div id="header">
         <div class="container" id="brand">
-            <img src="img/brand_icon.png"></img>
+            <img src="/img/brand_icon.png"></img>
             <h1>K-Penguin</h1>
         </div>
         <div class="container" id="navbar">
             <div class="row">
-                <div class="col-md-1.5"><a href="/profile">Home</a></div>
-                <div class="col-md-1.5"><a href="/cart">Cart</a></div>
+                <div class="col-md-1.5"><a href="/user/<%= currentUser._id %>">Home</a></div>
                 <div class="col-md-1.5"><a href="/transactions">Transactions</a></div>
                 <div class="col-md-1.5"><a id="active" href="/artists">Artists</a></div>
-                <div class="col-md-1.5"><a href="/item_types">Items</a></div>
+                <div class="col-md-1.5"><a href="/items">Items</a></div>
                 <div class="col-md-6"><input type="text" placeholder="Items..."></input><button onclick="window.location.href = '/results';" class="btn btn-default">Search</button></div>
             </div>
         </div>
     </div>
 
     <div id="content" class="container">
-        <h1>Artists</h1>
+        <h1 class="text-center">Artists</h1>
         <hr>
+        <h3 id="error" class="text-center"><%= error %></h3>
         <ul>
-            <li><a href="/artist">BTS</a></li>
-            <li><a href="/artist">IU</a></li>
-            <li><a href="/artist">Jennie Kim</a></li>
-            <li><a href="/artist">Twice</a></li>
-            <li><a href="/artist">Uee</a></li>
+            <% for(var i = 0; i < artists.length; i++) {%>
+                <li><a href="/artist/<%= artists[i].toLowerCase() %>"><%= artists[i] %></a></li>
+            <% } %>
         </ul>
     </div>
 

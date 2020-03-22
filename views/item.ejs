@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-    <link href="css/item_style.css" rel="stylesheet" type="text/css">
+    <link href="/css/item_style.css" rel="stylesheet" type="text/css">
 
     <title><%= title %></title>
 </head>
@@ -14,16 +14,15 @@
 <body>
     <div id="header">
         <div class="container" id="brand">
-            <img src="img/brand_icon.png"></img>
+            <img src="/img/brand_icon.png"></img>
             <h1>K-Penguin</h1>
         </div>
         <div class="container" id="navbar">
             <div class="row">
-                <div class="col-md-1.5"><a href="/profile">Home</a></div>
-                <div class="col-md-1.5"><a href="/cart">Cart</a></div>
+                <div class="col-md-1.5"><a href="/user/<%= currentUser %>">Home</a></div>
                 <div class="col-md-1.5"><a href="/transactions">Transactions</a></div>
                 <div class="col-md-1.5"><a href="/artists">Artists</a></div>
-                <div class="col-md-1.5"><a href="/item_types">Items</a></div>
+                <div class="col-md-1.5"><a href="/items">Items</a></div>
                 <div class="col-md-6"><input type="text" placeholder="Items..."></input><button onclick="window.location.href = '/results';" class="btn btn-default">Search</button></div>
             </div>
         </div>
@@ -33,20 +32,31 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-7">
-                    <h1 id="itemName">Jennie Kim Jacket</h1>
-                    <h4 id="postedBy">| posted by <a id="itemUser" href="/profile">@Asuna-</a></h4>
-                    <h3 id="itemPrice">Php 4500.00</h3>
-                    <h3 id="itemStatus0">AVAILABLE</h3>
+                    <h1 id="itemName"><%= item.name %></h1>
+                    <h4 id="postedBy">| posted by <a id="itemUser" href="/user/<%= item.user.id %>">@<%= item.user.username %></a></h4>
+                    <h3 id="itemPrice">₱<%= item.price %></h3>
+                    <h3 id="<%= item.status %>"><%= item.status %></h3>
                     <hr>
                     <h2>Description</h2>
-                        <p id="itemDescription">Jennie Kim's merchandise Jacket EXCLUSIVE</p>
-                        <p><strong>Artist: </strong><a id="itemArtist" href="/artist">Jennie Kim</a></p>
-                        <p><strong>Item Type: </strong><a id="itemType" href="/item_type">Clothing</a></p>
+                        <p id="itemDescription"><%= item.description %></p>
+                        <p><strong>Artist: </strong><a id="itemArtist" href="/artist/<%= item.artist.toLowerCase() %>"><%= item.artist %></a></p>
+                        <p><strong>Item Type: </strong><a id="itemType" href="/item_type/<%= item.itemType.toLowerCase() %>"><%= item.itemType.toUpperCase() %></a></p>
                     <hr>
-                    <input type ="button" onclick="window.location.href = '/cart';" class="btn btn-success" value="Add to Cart">
+                    <% if(item.user.id.toString().trim() === currentUser.toString().trim()){ %>
+                        <p><a href='/item_edit/<%= item._id %>'><button type="button" class="btn btn-default">Edit Item</button></a></p>
+                    <% } else{ %>
+                        <h2>Order Form</h2>
+                        <p class="help-block">Labels with (*) are required fields.</p>
+                            <form method="post">
+                                <div class="form-group"><label>Recipient Name*</label><input required name="inputName" type="text" class="form-control" placeholder="Add Recipient Name"></div>
+                                <div class="form-group"><label>Delivery Address*</label><input required name="inputAddress" type="text" class="form-control" placeholder="Add Delivery Address"></div>
+                                <div class="form-group"><label>Notes</label><textarea required name="inputNotes" class="form-control" placeholder="Add Notes"></textarea></div>
+                                <p><input type="submit" class="btn btn-success" value="Confirm"></p>
+                            </form>
+                    <% } %>
                 </div>
                 <div class="col-md-5">
-                    <img id="itemImage" src="img/photocard_jennie.jpg"></img>
+                    <img id="itemImage" src="/img/photocard_jennie.jpg"></img>
                 </div>
             </div>
         </div>

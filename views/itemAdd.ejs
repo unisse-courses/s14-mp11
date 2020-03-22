@@ -6,25 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-    <link href="css/itemAdd_style.css" rel="stylesheet" type="text/css">
+    <link href="/css/itemAdd_style.css" rel="stylesheet" type="text/css">
 
     <title><%= title %></title>
-    <script src="js/itemAdd.js"></script>
 </head>
 
 <body>
     <div id="header">
         <div class="container" id="brand">
-            <img src="img/brand_icon.png"></img>
+            <img src="/img/brand_icon.png"></img>
             <h1>K-Penguin</h1>
         </div>
         <div class="container" id="navbar">
             <div class="row">
-                <div class="col-md-1.5"><a id="active" href="/profile">Home</a></div>
-                <div class="col-md-1.5"><a href="/cart">Cart</a></div>
+                <div class="col-md-1.5"><a id="active" href="/user/<%= currentUser._id %>">Home</a></div>
                 <div class="col-md-1.5"><a href="/transactions">Transactions</a></div>
                 <div class="col-md-1.5"><a href="/artists">Artists</a></div>
-                <div class="col-md-1.5"><a href="/item_types">Items</a></div>
+                <div class="col-md-1.5"><a href="/items">Items</a></div>
                 <div class="col-md-6"><input type="text" placeholder="Items..."></input><button onclick="window.location.href = '/results';" class="btn btn-default">Search</button></div>
             </div>
         </div>
@@ -35,12 +33,12 @@
             <h1>Add Item</h1>
             <p class="help-block">Labels with (*) are required fields.</p>
             <hr>
-        <form name="item-form">
-            <div class="form-group"><label>Item Name*</label><input id="itemName" type="text" class="form-control" placeholder="Add Product Name"></div>
-            <div class="form-group"><label>Price (in Philippine Peso)*</label><input id="itemPrice" type="text" class="form-control" placeholder="Add Price"></div>
-            <div class="form-group"><label>Artist*</label><input id="itemArtist" type="text" class="form-control" placeholder="Add Artist"></div> 
+        <form method="post">
+            <div class="form-group"><label>Item Name*</label><input required name="itemName" type="text" class="form-control" placeholder="Add Product Name"></div>
+            <div class="form-group"><label>Price (in Philippine Peso)*</label><input required name="itemPrice" type="number" step="0.1" class="form-control" placeholder="Add Price"></div>
+            <div class="form-group"><label>Artist*</label><input required name="itemArtist" type="text" class="form-control" placeholder="Add Artist"></div> 
             <div class="form-group"><label>Item Type*</label>
-                <select id="itemType" class="form-control">
+                <select name="itemType" class="form-control">
                 <option value="albums">Albums</option>
                 <option value="apparel">Apparel</option>
                 <option value="books">Books</option>
@@ -50,10 +48,10 @@
                 <option value="others">Others</option>
                 </select>
             </div>
-            <div class="form-group"><label>Description*</label><textarea id="itemDescription" class="form-control" placeholder="Add Description"></textarea></div>
-            <div class="form-group"><label>Upload Item Image*</label><input id="itemImage" type="file"><p class="help-block">Only photos in .png and .jpg format are allowed.</p></div>
+            <div class="form-group"><label>Description*</label><textarea required name="itemDescription" class="form-control" placeholder="Add Description"></textarea></div>
+            <div class="form-group"><label>Upload Item Image*</label><input name="itemImage" type="file" accept="image/jpg,image/png,image/jpeg"><p class="help-block">Only photos in .png and .jpg format are allowed.</p></div>
             <hr> 
-            <p><input type ="button" onclick="addItem()" class="btn btn-default" value="Add Item"></p>
+            <p><input type ="submit" class="btn btn-default" value="Add Item"></p>
         </form>
         </div>
     </div>

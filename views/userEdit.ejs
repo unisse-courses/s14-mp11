@@ -6,21 +6,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-    <link href="css/userEdit_style.css" rel="stylesheet" type="text/css">
-    <script src="js/userEdit.js"></script>
+    <link href="/css/userEdit_style.css" rel="stylesheet" type="text/css">
+
     <title><%= title %></title>
 </head>
 
 <body>
     <div id="header">
         <div class="container" id="brand">
-            <img src="img/brand_icon.png"></img>
+            <img src="/img/brand_icon.png"></img>
             <h1>K-Penguin</h1>
         </div>
         <div class="container" id="navbar">
             <div class="row">
-                <div class="col-md-1.5"><a id="active" href="/profile">Home</a></div>
-                <div class="col-md-1.5"><a href="/cart">Cart</a></div>
+                <div class="col-md-1.5"><a id="active" href="/user/<%= currentUser._id %>">Home</a></div>
                 <div class="col-md-1.5"><a href="/transactions">Transactions</a></div>
                 <div class="col-md-1.5"><a href="/artists">Artists</a></div>
                 <div class="col-md-1.5"><a href="/item_types">Items</a></div>
@@ -31,21 +30,18 @@
 
     <div id="content">
         <div class="container">
-            <h1>Edit User</h1>
+            <h1>Edit Profile</h1>
             <p class="help-block">Labels with (*) are required fields.</p>
             <hr>
-        <form name="edit-form">
-            <div class="form-group"><label>E-mail Address*</label><input name="email" type="text" class="form-control" placeholder="Edit E-mail Address"></div>
-            <div class="form-group"><label>Name*</label><input name="name" type="text" class="form-control" placeholder="Edit Name"></div>
-            <div class="form-group"><label>Username*</label><input name="username" type="text" class="form-control" placeholder="Edit Username"></div>
-            <div class="form-group"><label>Password*</label><input name="password1" type="password" class="form-control" placeholder=""></div> 
-            <div class="form-group"><label>Re-type Password*</label><input name="password2" type="password" class="form-control" placeholder=""></div> 
-            <div class="form-group"><label>Description*</label><textarea name="userDescription" class="form-control" placeholder="Edit Description"></textarea></div>
-            <div class="form-group"><label>Upload Profile Picture*</label><input name="userImage" type="file"><p class="help-block">Only photos in .png and .jpg format are allowed.</p></div>
-            <hr> 
-            <input type ="button" onclick="editUser()" class="btn btn-default" value="Apply Changes">
+            <p id="error"><%= error %></p>
+        <form method="post">
+            <div class="form-group"><label>Name*</label><input name="name" type="text" class="form-control" value="<%= user.name %>"></div>
+            <div class="form-group"><label>Password*</label><input name="password1" type="password" class="form-control" value="<%= user.password %>"></div> 
+            <div class="form-group"><label>Re-type Password*</label><input name="password2" type="password" class="form-control"></div> 
+            <div class="form-group"><label>Description*</label><textarea name="userDescription" class="form-control" ><%= user.description %></textarea></div>
+            <div class="form-group"><label>Upload Profile Picture*</label><input name="userImage" type="file" accept="image/jpg,image/png,image/jpeg"><%= user.image %><p class="help-block">Only photos in .png and .jpg format are allowed.</p></div>
             <hr>
-            <p><input type ="button" onclick="window.location.href = '/';" class="btn btn-danger" value="Delete My Account"></p>
+            <p><input type="submit" class="btn btn-default" value="Apply Changes"></p>
         </form>
         </div>
     </div>

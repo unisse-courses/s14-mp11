@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-    <link href="css/user_style.css" rel="stylesheet" type="text/css">
+    <link href="/css/user_style.css" rel="stylesheet" type="text/css">
 
     <title><%= title %></title>
 </head>
@@ -14,16 +14,15 @@
 <body>
     <div id="header">
         <div class="container" id="brand">
-            <img src="img/brand_icon.png"></img>
+            <img src="/img/brand_icon.png"></img>
             <h1>K-Penguin</h1>
         </div>
         <div class="container" id="navbar">
             <div class="row">
-                <div class="col-md-1.5"><a id="active" href="/profile">Home</a></div>
-                <div class="col-md-1.5"><a href="/cart">Cart</a></div>
+                <div class="col-md-1.5"><a href="/user/<%= currentUser._id %>">Home</a></div>
                 <div class="col-md-1.5"><a href="/transactions">Transactions</a></div>
                 <div class="col-md-1.5"><a href="/artists">Artists</a></div>
-                <div class="col-md-1.5"><a href="/item_types">Items</a></div>
+                <div class="col-md-1.5"><a href="/items">Items</a></div>
                 <div class="col-md-6"><input type="text" placeholder="Items..."></input><button onclick="window.location.href = '/results';" class="btn btn-default">Search</button></div>
             </div>
         </div>
@@ -33,93 +32,40 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-7">
-                    <h1 id="name">Yuuki Asuna</h1>
-                    <h4 id="username">@Asuna-</h4>
+                    <h1 id="name"><%= user.name %></h1>
+                    <h4 id="username">@<%= user.username %></h4>
                     <hr>
                     <h2>Description</h2>
-                        <p id="userDescription">ARMY ~ ONCE ~ BLINK ~ ALL IN ONE K-POP LOVER<br> CHECK OUT MY PROFILE FOR 
-                        MORE MERCH!!!</p>
-                    <hr>
-                    <p><button onclick="window.location.href = '/edit_profile';" type="submit" class="btn btn-default">Edit Profile</button>
-                        <button onclick="window.location.href = '/add_item';" type="submit" class="btn btn-default">Add Item</button>
-                    </p>
+                        <p id="userDescription"><%= user.description %></p>
+                    <% if(user._id.toString().trim() === currentUser.toString().trim()){ %>
+                        <hr>
+                        <p> <button onclick="window.location.href = '/user_edit';" type="submit" class="btn btn-default">Edit Profile</button>
+                            <button onclick="window.location.href = '/item_add';" type="submit" class="btn btn-default">Add Item</button>
+                            <button onclick="window.location.href = '/login';" type="submit" class="btn btn-default">Logout</button>
+                        </p>
+                    <% } %>
                 </div>
                 <div class="col-md-5">
-                    <img id="userImage" src="img/asuna_user.jpg"></img>
+                    <img id="userImage" src="/img/asuna_user.jpg"></img>
                 </div>
             </div>
             <hr>
             <h2>Items</h2>
-                <div id="item" class="row">
-                    <div class="col-md-3"><img id="itemImage" src="img/bts_calendar.jpg"></img></div>
-                    <div class="col-md-7">
-                        <h3 id="itemName"><a href="/item">BTS OFFICIAL 2020 12 x 14 Inch Monthly Deluxe Wall Calendar</a></h3>
-                        <p id="itemPrice">Php 619.84</p>
-                        <p id="itemStatus0">AVAILABLE</p>
-                        <p id="itemDescription">16-month calendar, beginning with a bonus spread of the final four months of preceding year<br>
-                            Large, Roomy Day Blocks - All major holidays and moon phases listed, with plenty of room for writing notes and appointments<br>
-                            Specifications - 16-months (two-page layout September-December 2019, and January-December 2020); 14" x 24" (open); 28 pages</p>
-                    </div>
-                    <div class="col-md-2">
-                        <p><button onclick="window.location.href = '/edit_item';" type="submit" class="btn btn-default">Edit Item</button>
-                        </p>
-                    </div>
-                </div>
-                <div id="item" class="row">
-                    <div class="col-md-3"><img id="itemImage" src="img/bts_jacket.jpg"></img></div>
-                    <div class="col-md-7">
-                        <h3 id="itemName"><a href="/item">BTS Love Yourself Hoodie</a></h3>
-                        <p id="itemPrice">Php 1020.31</p>
-                        <p id="itemStatus0">AVAILABLE</p>
-                        <p id="itemDescription">Kpop BTS 2017 New Logo Hoodie<br>
-                            Material:cotton blend and comfortable to sport<br>
-                            100% Brand New And High Quality</p>
-                    </div>
-                    <div class="col-md-2">
-                        <p><button onclick="window.location.href = '/edit_item';" type="submit" class="btn btn-default">Edit Item</button>
-                        </p>
-                    </div>
-                </div>
-                <div id="item" class="row">
-                    <div class="col-md-3"><img id="itemImage" src="img/mamamoo_album1.jpg"></img></div>
-                    <div class="col-md-7">
-                        <h3 id="itemName"><a href="/item">Jennie Kim Photo card</a></h3>
-                        <p id="itemPrice">Php 300.00</p>
-                        <p id="itemStatus1">UNAVAILABLE</p>
-                        <p id="itemDescription">JENNIE KIM BLACKPINK PHOTOSHOOT OFFICIAL PHOTOCARD YG ENTERTAINMENT BLINKS FAN MERCHANDISE</p>
-                    </div>
-                    <div class="col-md-2">
-                        <p><button onclick="window.location.href = '/edit_item';" type="submit" class="btn btn-default">Edit Item</button>
-                        </p>
-                    </div>
-                </div>
-                <div id="item" class="row">
-                    <div class="col-md-3"><img id="itemImage" src="img/twice_album2.jpg"></img></div>
-                    <div class="col-md-7">
-                        <h3 id="itemName"><a href="/item">TWICE [YES or YES] CD</a></h3>
-                        <p id="itemPrice">Php 1262.00</p>
-                        <p id="itemStatus2">RESERVED</p>
-                        <p id="itemDescription">[YES or YES] 6th Mini Album RANDOM CD+POSTER+PhotoBook+5p PhotoCard+1p Yes or Yes Card+Pre-Order Item+Tracking Number K-POP SEALED</p>
-                    </div>
-                    <div class="col-md-2">
-                        <p><button onclick="window.location.href = '/edit_item';" type="submit" class="btn btn-default">Edit Item</button>
-                        </p>
-                    </div>
-                </div>
-                <div id="item" class="row">
-                    <div class="col-md-3"><img id="itemImage" src="img/twice_album.jpeg"></img></div>
-                    <div class="col-md-7">
-                        <h3 id="itemName"><a href="/item">TWICE Feel Special [A ver.]</a></h3>
-                        <p id="itemPrice">Php 1940.00</p>
-                        <p id="itemStatus0">AVAILABLE</p>
-                        <p id="itemDescription">'Feel Special' 8th Mini Album A Version CD+88p PhotoBook+Lyrics Paper+5p PhotoCard+1p Gold PhotoCard+Message PhotoCard SET+Tracking Kpop Sealed</p>
-                    </div>
-                    <div class="col-md-2">
-                        <p><button onclick="window.location.href = '/edit_item';" type="submit" class="btn btn-default">Edit Item</button>
-                        </p>
-                    </div>
-                </div>
             <hr>
+            <% if(items.length == 0){ %>
+                <p>No items.</p>
+            <% } else{ %>  
+                <% for(var i = 0; i < items.length; i++) {%>
+                    <div id="item" class="row">
+                        <div class="col-md-3"><img id="itemImage" src="/img/twice_album.jpeg"></img></div>
+                        <div class="col-md-7">
+                            <h3 id="itemName"><a href="/item/<%= items[i]._id %>"><%= items[i].name %></a></h3>
+                            <p id="itemPrice">₱<%= items[i].price %></p>
+                            <p id="<%= items[i].status %>"><%= items[i].status.toUpperCase() %></p>
+                            <p id="itemDescription"><%= items[i].description %></p>
+                    </div>
+                <% } %>
+            <% } %>
         </div>
     </div>
 

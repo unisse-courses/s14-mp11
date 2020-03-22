@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-    <link href="css/artist_style.css" rel="stylesheet" type="text/css">
+    <link href="/css/artist_style.css" rel="stylesheet" type="text/css">
 
     <title><%= title %></title>
 </head>
@@ -14,16 +14,15 @@
 <body>
     <div id="header">
         <div class="container" id="brand">
-            <img src="img/brand_icon.png"></img>
+            <img src="/img/brand_icon.png"></img>
             <h1>K-Penguin</h1>
         </div>
         <div class="container" id="navbar">
             <div class="row">
-                <div class="col-md-1.5"><a href="/profile">Home</a></div>
-                <div class="col-md-1.5"><a href="/cart">Cart</a></div>
+                <div class="col-md-1.5"><a href="/user/<%= currentUser._id %>">Home</a></div>
                 <div class="col-md-1.5"><a href="/transactions">Transactions</a></div>
                 <div class="col-md-1.5"><a href="/artists">Artists</a></div>
-                <div class="col-md-1.5"><a href="/item_types">Items</a></div>
+                <div class="col-md-1.5"><a href="/items">Items</a></div>
                 <div class="col-md-6"><input type="text" placeholder="Items..."></input><button onclick="window.location.href = '/results';" class="btn btn-default">Search</button></div>
             </div>
         </div>
@@ -31,38 +30,20 @@
 
     <div id="content">
         <div class="container">
-            <h1 id="artistName" class="text-center">TWICE</h1>
+            <h1 id="artistName" class="text-center"><%= artist %></h1>
             <hr>
-            <div id="item" class="row">
-                <div class="col-md-3"><img id="itemImage" src="img/twice_album.jpeg"></img></div>
-                <div class="col-md-9">
-                    <h3 id="itemName"><a href="/item">TWICE Feel Special [A ver.]</a></h3>
-                    <p id="postedBy">| posted by <a id="itemUser" href="/profile">@YaBoi_Gabriel</a></p>
-                    <p id="itemPrice">Php 1940.00</p>
-                    <p id="itemStatus0">AVAILABLE</p>
-                    <p id="itemDescription">'Feel Special' 8th Mini Album A Version CD+88p PhotoBook+Lyrics Paper+5p PhotoCard+1p Gold PhotoCard+Message PhotoCard SET+Tracking Kpop Sealed</p>
+            <% for(var i = 0; i < items.length; i++) {%>
+                <div id="item" class="row">
+                    <div class="col-md-3"><img id="itemImage" src="/img/Jennie_Kim_poster.jpg"></img></div>
+                    <div class="col-md-9">
+                        <h3 id="itemName"><a href="/item/<%= items[i]._id %>"><%= items[i].name %></a></h3>
+                        <p id="postedBy">| posted by <a id="itemUser" href="/user/<%= items[i].user.id %>">@<%= items[i].user.username %></a></p>
+                        <p id="itemPrice">₱<%= items[i].price %></p>
+                        <p id="<%= items[i].status %>"><%= items[i].status.toUpperCase() %></p>
+                        <p id="itemDescription"><%= items[i].description %></p>
+                    </div>
                 </div>
-            </div>
-            <div id="item" class="row">
-                <div class="col-md-3"><img id="itemImage" src="img/twice_card.jpg"></img></div>
-                <div class="col-md-9">
-                    <h3 id="itemName"><a href="/item">TWICE Transparent Card</a></h3>
-                    <p id="postedBy">| posted by <a id="itemUser" href="/profile">@AnjeLodicakes</a></p>
-                    <p id="itemPrice">Php 410.00</p>
-                    <p id="itemStatus2">RESERVED</p>
-                    <p id="itemDescription">TRANSPARENT PHOTO CARDS 25pcs [FAN GOODS] by JYP Entertainment</p>
-                </div>
-            </div>
-            <div id="item" class="row">
-                <div class="col-md-3"><img id="itemImage" src="img/twice_album2.jpg"></img></div>
-                <div class="col-md-9">
-                    <h3 id="itemName"><a href="/item">TWICE [YES or YES] CD</a></h3>
-                    <p id="postedBy">| posted by <a id="itemUser" href="/profile">@AnjeLodicakes</a></p>
-                    <p id="itemPrice">Php 1262.00</p>
-                    <p id="itemStatus1">UNAVAILABLE</p>
-                    <p id="itemDescription">[YES or YES] 6th Mini Album RANDOM CD+POSTER+PhotoBook+5p PhotoCard+1p Yes or Yes Card+Pre-Order Item+Tracking Number K-POP SEALED</p>
-                </div>
-            </div>
+            <% } %>
         </div>
     </div>
 
