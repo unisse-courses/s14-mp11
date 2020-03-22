@@ -35,8 +35,8 @@
             <p class="help-block">Labels with (*) are required fields.</p>
             <hr>
         <form name="edit-form">
-            <div class="form-group"><label>Item Name*</label><input name="itemName" type="text" class="form-control" value="Edit Product Name"></div>
-            <div class="form-group"><label>Price (in Philippine Peso)*</label><input name="itemPrice" type="text" class="form-control" value="Edit Price"></div>
+            <div class="form-group"><label>Item Name*</label><input name="itemName" type="text" class="form-control" placeholder="Edit Product Name"></div>
+            <div class="form-group"><label>Price (in Philippine Peso)*</label><input name="itemPrice" type="text" class="form-control" placeholder="Edit Price"></div>
             <div class="form-group"><label>Status*</label>
                 <select id="itemStatus" class="form-control">
                 <option value="available">Available</option>
@@ -44,7 +44,7 @@
                 <option value="notAvailable">Not Available</option>
                 </select>
             </div>
-            <div class="form-group"><label>Artist*</label><input name="itemArtist" type="text" class="form-control" value="Edit Artist"></div> 
+            <div class="form-group"><label>Artist*</label><input name="itemArtist" type="text" class="form-control" placeholder="Edit Artist"></div> 
             <div class="form-group"><label>Item Type*</label>
                 <select id="itemType" class="form-control">
                 <option value="albums">Albums</option>
@@ -56,7 +56,7 @@
                 <option value="others">Others</option>
                 </select>
             </div>
-            <div class="form-group"><label>Description*</label><textarea name="itemDescription" class="form-control" value="Edit Description"></textarea></div>
+            <div class="form-group"><label>Description*</label><textarea name="itemDescription" class="form-control" placeholder="Edit Description"></textarea></div>
             <div class="form-group"><label>Upload Item Image*</label><input id="itemImage" type="file"><p class="help-block">Only photos in .png and .jpg format are allowed.</p></div>
             <hr>
             <input type ="button" onclick="editItem();" class="btn btn-default" value="Apply Changes">
