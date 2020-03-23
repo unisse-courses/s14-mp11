@@ -5,7 +5,7 @@
 *Sunpayco, Julian
 
 ## Instructions
-1. In the console, go to the project folder and initialize the project by inputting npm init.
+1. In the console, go to the project folder and initialize the project by inputting npm install.
 2. While still in the folder in the console, input nodemon app.js to run the web application.
 
 ## Project Notes
