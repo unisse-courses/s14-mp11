@@ -31,24 +31,41 @@
 1. For http://localhost:3000/ or the registration page:
 ### User 1
 **E-mail Address:** gabminamedez@gmail.com
+
 **Name:** Gab Minamedez
+
 **Profile Picture:** DISREGARD FOR NOW
+
 **Username:** gabminamedez
+
 **Password:** dragon
+
 **Description:** chaeyoung numbah wan
+
 ### User 2
 **E-mail Address:** anjantio@gmail.com
+
 **Name:** Anjelo
+
 **Profile Picture:** DISREGARD FOR NOW
+
 **Username:** anjelo36
+
 **Password:** jollibee
+
 **Description:** i sell blackpink merch yay
+
 ### User 3
 **E-mail Address:** jsunpayco@gmail.com
+
 **Name:** Julian Sunpayco
+
 **Profile Picture:** DISREGARD FOR NOW
+
 **Username:** soonpayko
+
 **Password:** mamamo
+
 **Description:** i love korea
 
 2. For http://localhost:3000/item_add or the add item page:
@@ -56,36 +73,64 @@
 **Item Name:** chae pc
 
 **Price:** 245
+
 **Artist:** Twice
+
 **Item Type:** Photocards
+
 **Description:** very good
+
 ### Item 2
 **Item Name:** BTS Map of the Soul: Persona
+
 **Price:** 1000
+
 **Artist:** bts
+
 **Item Type:** Albums
+
 **Description:** Fresh from Korea, bought in January.
+
 ### Item 3
 **Item Name:** Jennie Kim jacket
+
 **Price:** 1500
+
 **Artist:** Blackpink
+
 **Item Type:** Apparel
+
 **Description:** Original adidas jacket from BGC
+
 ### Item 4
 **Item Name:** GOT7 lightstick
+
 **Price:** 700
+
 **Artist:** GOT7
+
 **Item Type:** Lightsticks
+
 **Description:** bought after concert lol
+
 ### Item 5
-**Item Name:** Love Shot Chanyeol Photocatd
+**Item Name:** Love Shot Chanyeol Photocard
+
 **Price:** 245
+
 **Artist:** EXO
+
 **Item Type:** Photocards
+
 **Description:** good condition
+
 ### Item 6
 **Item Name:** Tzuyu Photobook
+
 **Price:** 1200
+
 **Artist:** Twice
+
 **Item Type:** Books
+
 **Description:** we stan a talented visual maknae
