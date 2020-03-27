@@ -1,8 +1,8 @@
 # K-Penguin
 ## Team Members: Anjelo Antioquia, Gabriel Nicolas Minamedez, Julian Sunpayco
-*Antioquia, Anjelo
-*Minamedez, Gabriel
-*Sunpayco, Julian
+- Antioquia, Anjelo
+- Minamedez, Gabriel
+- Sunpayco, Julian
 
 ## Project Directory Guide
 1. The app.js file is the main Node.js file of the web application that is used to run the project.
@@ -30,6 +30,6 @@
 ## Dummy Data
 1. For http://localhost:3000/ or the registration page:
 ### User 1
-**E-mail Address: ** gabminamedez@gmail.com
-**Name: ** Gab Minamedez
-**Profile Picture: ** DISREGARD FOR NOW
+**E-mail Address:** gabminamedez@gmail.com
+**Name:** Gab Minamedez
+**Profile Picture:** DISREGARD FOR NOW
