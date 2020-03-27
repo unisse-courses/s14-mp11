@@ -54,6 +54,7 @@
 2. For http://localhost:3000/item_add or the add item page:
 ### Item 1
 **Item Name:** chae pc
+
 **Price:** 245
 **Artist:** Twice
 **Item Type:** Photocards
