@@ -30,6 +30,6 @@
 ## Dummy Data
 1. For http://localhost:3000/ or the registration page:
 ### User 1
-**E-mail Address:** gabminamedez@gmail.com. 
-**Name:** Gab Minamedez. 
+**E-mail Address:** gabminamedez@gmail.com
+**Name:** Gab Minamedez
 **Profile Picture:** DISREGARD FOR NOW
