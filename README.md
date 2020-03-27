@@ -18,8 +18,8 @@
 
 ## Instructions
 1. Open the project folder in the command line.
-2. To install the npm dependencies attributed to this project, enter the command '''npm install''' in the command line.
-3. The project is now ready to run. Enter the command '''nodemon app.js''' to run the project. You should see a direct link printed on the command line that directly redirects you to the web application on your default browser.
+2. To install the npm dependencies attributed to this project, enter the command 'npm install' in the command line.
+3. The project is now ready to run. Enter the command 'nodemon app.js' to run the project. You should see a direct link printed on the command line that directly redirects you to the web application on your default browser.
 4. The project should now be ready in the port http://localhost:3000. The index of the project is a user registration page.
  
 ## Project Notes
