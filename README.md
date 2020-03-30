@@ -25,7 +25,6 @@
 ## Project Notes
 1. The image storing/rendering through MongoDB is still currently in the works. For the meantime, please disregard the upload/update image features when creating/editing users or items.
 2. For the meantime, dummy images are used.
-3. The search function is still currently in the works. For the meantime, please disregard the search panel in the navbar.
 
 ## Dummy Data
 1. For http://localhost:3000/ or the registration page:
