@@ -17,6 +17,10 @@ module.exports = function(app){
         });
     });
 
+    app.post('/artist/:artist', function(req, res){
+        res.redirect('/results/' + req.body.search);
+    });
+
     app.get('/item/:id', function(req, res){
         Item.findOne({_id: req.params.id}, function(err, item){
             User.findOne({_id: item.user.id}, function(err, user){
@@ -142,6 +146,10 @@ module.exports = function(app){
         });
     });
 
+    app.post('/item_type/:itemType', function(req, res){
+        res.redirect('/results/' + req.body.search);
+    });
+
     app.get('/artists', function(req, res){
         Item.find().distinct('artist', function(error, artists){
             if(artists.length == 0){
@@ -162,7 +170,10 @@ module.exports = function(app){
                 });
             }
         });
+    });
 
+    app.post('/artists', function(req, res){
+        res.redirect('/results/' + req.body.search);
     });
 
     app.get('/items', function(req, res){
@@ -185,6 +196,10 @@ module.exports = function(app){
                 });
             }
         });
+    });
+
+    app.post('/items', function(req, res){
+        res.redirect('/results/' + req.body.search);
     });
 
     app.get('/', function(req, res){
@@ -278,11 +293,22 @@ module.exports = function(app){
         });
     });
 
-    app.get('/results', function(req, res){
-        res.render('results.ejs', {
-            title: "K-Penguin | Search Results",
-            currentUser: loggedUser
+    app.get('/results/:query', function(req, res){
+        Item.find({name: {$regex: req.params.query, $options: 'i'}}, function(err, items){
+            console.log(items);
+
+            res.render('results.ejs', {
+                title: "K-Penguin | Search Results",
+                currentUser: loggedUser,
+                items: items,
+                query: req.params.query
+            });
         });
+        
+    });
+
+    app.post('/results/:query', function(req, res){
+        res.redirect('/results/' + req.body.search);
     });
 
     app.get('/transactions', function(req, res){
@@ -301,6 +327,10 @@ module.exports = function(app){
         });
     });
 
+    app.post('/transactions', function(req, res){
+        res.redirect('/results/' + req.body.search);
+    });
+
     app.get('/user/:id', function(req, res){
         User.findOne({_id: req.params.id}, function(err, user){
             Item.find({user: {id: user._id, username: user.username}}, function(err, items){
@@ -312,6 +342,10 @@ module.exports = function(app){
                 });
             });
         });
+    });
+
+    app.post('/user/:id', function(req, res){
+        res.redirect('/results/' + req.body.search);
     });
 
     app.get('/user_edit', function(req, res){

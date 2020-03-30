@@ -23,25 +23,36 @@
                 <div class="col-md-1.5"><a href="/transactions">Transactions</a></div>
                 <div class="col-md-1.5"><a href="/artists">Artists</a></div>
                 <div class="col-md-1.5"><a href="/items">Items</a></div>
-                <div class="col-md-6"><input type="text" placeholder="Items..."></input><button onclick="window.location.href = '/results';" class="btn btn-default">Search</button></div>
+                <div class="col-md-6">
+                    <form method="post">
+                        <div class="form-group"><input required name="search" id="searchBar" type="text" placeholder="Search items..."></input></div>
+                        <p><input type="submit" id="searchButton" class="btn btn-default" value="Search"></p>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
 
     <div id="content">
         <div class="container">
-            <h1>Search Results for <div id="query">twice</div></h1>
+            <h1>Search results for '<%= query %>'</h1>
             <hr>
-            <div id="item" class="row">
-                <div class="col-md-3"><img id="itemImage" src="/img/twice_album.jpeg"></img></div>
-                <div class="col-md-9">
-                    <h3 id="itemName"><a href="/item">TWICE Feel Special [A ver.]</a></h3>
-                    <p id="postedBy">| posted by <a id="itemUser" href="/user">@YaBoi_Gabriel</a></p>
-                    <p id="itemPrice">₱ 1940.00</p>
-                    <p id="itemStatus0">AVAILABLE</p>
-                    <p id="itemDescription">'Feel Special' 8th Mini Album A Version CD+88p PhotoBook+Lyrics Paper+5p PhotoCard+1p Gold PhotoCard+Message PhotoCard SET+Tracking Kpop Sealed</p>
-                </div>
-            </div>
+            <% if(items.length == 0){ %>
+                <h3 class="text-center">No items match your search.</h3>
+            <% } else{ %>  
+                <% for(var i = 0; i < items.length; i++) {%>
+                    <div id="item" class="row">
+                        <div class="col-md-3"><img id="itemImage" src="/img/Jennie_Kim_poster.jpg"></img></div>
+                        <div class="col-md-9">
+                            <h3 id="itemName"><a href="/item/<%= items[i]._id %>"><%= items[i].name %></a></h3>
+                            <p id="postedBy">| posted by <a id="itemUser" href="/user/<%= items[i].user.id %>">@<%= items[i].user.username %></a></p>
+                            <p id="itemPrice">₱<%= items[i].price %></p>
+                            <p id="<%= items[i].status %>"><%= items[i].status.toUpperCase() %></p>
+                            <p id="itemDescription"><%= items[i].description %></p>
+                        </div>
+                    </div>
+                <% } %>
+            <% } %>
         </div>
     </div>
 

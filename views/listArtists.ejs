@@ -23,7 +23,12 @@
                 <div class="col-md-1.5"><a href="/transactions">Transactions</a></div>
                 <div class="col-md-1.5"><a href="/artists">Artists</a></div>
                 <div class="col-md-1.5"><a href="/items">Items</a></div>
-                <div class="col-md-6"><input type="text" placeholder="Items..."></input><button onclick="window.location.href = '/results';" class="btn btn-default">Search</button></div>
+                <div class="col-md-6">
+                    <form method="post">
+                        <div class="form-group"><input required name="search" id="searchBar" type="text" placeholder="Search items..."></input></div>
+                        <p><input type="submit" id="searchButton" class="btn btn-default" value="Search"></p>
+                    </form>
+                </div>
             </div>
         </div>
     </div>
