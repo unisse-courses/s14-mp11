@@ -3,16 +3,17 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 
 const app = express();
-const port = 3000;
+const port = process.env.PORT|| 3000;
 
-app.set('port', process.env.port || port);
+app.set('port', port);
 app.set('view engine', 'ejs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
-mongoose.connect('mongodb://localhost:27017/kpenguin', {useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true});
+var url = process.env.MONGODB_URI || 'mongodb://localhost:27017/kpenguin';
+mongoose.connect(url, {useCreateIndex: true, useNewUrlParser: true, useUnifiedTopology: true});
 mongoose.connection.once('open',function(callback){
    console.log('Connected to database.');
    

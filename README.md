@@ -11,7 +11,9 @@
 - The css folder contains all the specific stylesesheets connected to the page.
 - The fonts folder cointains all the web-installed fonts used in this project.
 - The img folder contains all the dummy images found in the web application.
-4. The models folder contains one .js file for each schema (User, Item, Transaction) used in this web application.
+4. The routes folder contains all back-end related items. It has one subfolder and two files:
+- The models folder contains one .js file for each schema (User, Item, Transaction) used in this web application.
+- The scripts.js files contains all server-related files that is connected to the main app.js. This involves page rendering, redirecting, among others.
 5. The views folder contains all of the html files used for the pages. These html files use the ejs templating.
 
 ## Instructions
