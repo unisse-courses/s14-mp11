@@ -35,21 +35,26 @@
     </div>
 
     <div id="content">
-        <div class="container">
-            <h1 id="artistName" class="text-center"><%= artist %></h1>
+        <div class="container text-center">
+            <h1>About K-Penguin</h1>
             <hr>
-            <% for(var i = 0; i < items.length; i++) {%>
-                <div id="item" class="row">
-                    <div class="col-md-3"><img id="itemImage" src="/img/item.png"></img></div>
-                    <div class="col-md-9">
-                        <h3 id="itemName"><a href="/item/<%= items[i]._id %>"><%= items[i].name %></a></h3>
-                        <p id="postedBy">| posted by <a id="itemUser" href="/user/<%= items[i].user.id %>">@<%= items[i].user.username %></a></p>
-                        <p id="itemPrice">₱<%= items[i].price %></p>
-                        <p id="<%= items[i].status %>"><%= items[i].status.toUpperCase() %></p>
-                        <p id="itemDescription"><%= items[i].description %></p>
-                    </div>
-                </div>
-            <% } %>
+            <h2>The Developers</h2>
+            <p>K-Penguin is brought to you by:</p>
+            <p>Anjelo Antioquia</p>
+            <p>Gabriel Minamedez</p>
+            <p>Julian Sunpayco</p>
+            <p>This is a final machine project for our course in CCAPDEV.</p>
+            <h2>Components</h2>
+            <p>This project is developed in HTML, CSS, and JavaScript.</p>
+            <p>Node.js is used for the server-side.</p>
+            <p>MongoDB is used for the database.</p>
+            <p>The following NPM packages were used for development and server-side functionalities:</p>
+            <p>body-parser</p>
+            <p>ejs</p>
+            <p>express</p>
+            <p>mongodb</p>
+            <p>mongoose</p>
+            <p>nodemon</p>
         </div>
     </div>
 

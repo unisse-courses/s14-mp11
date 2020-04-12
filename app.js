@@ -399,6 +399,13 @@ app.post('/user_edit', function(req, res){
     }
 });
 
+app.get('/about', function(req, res){
+    res.render('about.ejs', {
+        title: "K-Penguin | About",
+        currentUser: loggedUser
+    });
+});
+
 app.listen(port, () => {
     console.log(`Proceed to http://localhost:${port} to view app.`);
 });

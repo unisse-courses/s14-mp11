@@ -23,6 +23,7 @@
                 <div class="col-md-1.5"><a href="/transactions">Transactions</a></div>
                 <div class="col-md-1.5"><a href="/artists">Artists</a></div>
                 <div class="col-md-1.5"><a href="/items">Items</a></div>
+                <div class="col-md-1.5"><a href="/about">About</a></div>
             </div>
         </div>
     </div>
@@ -34,7 +35,7 @@
                     <h1 id="itemName"><%= item.name %></h1>
                     <h4 id="postedBy">| posted by <a id="itemUser" href="/user/<%= item.user.id %>">@<%= item.user.username %></a></h4>
                     <h3 id="itemPrice">₱<%= item.price %></h3>
-                    <h3 id="<%= item.status %>"><%= item.status %></h3>
+                    <h3 id="<%= item.status %>"><%= item.status.toUpperCase() %></h3>
                     <hr>
                     <h2>Description</h2>
                         <p id="itemDescription"><%= item.description %></p>
