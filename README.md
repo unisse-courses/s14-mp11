@@ -1,5 +1,9 @@
 # K-Penguin
-## Team Members: Anjelo Antioquia, Gabriel Nicolas Minamedez, Julian Sunpayco
+
+## Description
+K-Penguin is a machine project for the subject CCAPDEV. This is an online shop for K-Pop products.
+
+## Team Members
 - Antioquia, Anjelo
 - Minamedez, Gabriel
 - Sunpayco, Julian
@@ -16,120 +20,19 @@
 - The scripts.js files contains all server-related files that is connected to the main app.js. This involves page rendering, redirecting, among others.
 5. The views folder contains all of the html files used for the pages. These html files use the ejs templating.
 
-## Instructions
+## Instructions for local machine web application use:
 1. Open the project folder in the command line.
-2. To install the npm dependencies attributed to this project, enter the command 'npm install' in the command line.
-3. The project is now ready to run. Enter the command 'nodemon app.js' to run the project. You should see a direct link printed on the command line that directly redirects you to the web application on your default browser.
-4. The project should now be ready in the port http://localhost:3000. The index of the project is a user registration page.
+2. To install the npm dependencies attributed to this project, enter the command ```npm install``` in the command line.
+3. The project is now ready to run. Enter the command ```nodemon app.js``` to run the project. You should see a direct link printed on the command line that directly redirects you to the web application on your default browser.
+4. The project should now be ready in the port http://localhost:3000.
+
+## Instructions for deployed web application use:
+1. Open a web browser.
+2. In the address bar, enter kpenguin.herokuapp.com to access the web application.
+
+## Web Application Pages Guide
+1. 
  
 ## Project Notes
 1. The image storing/rendering through MongoDB is still currently in the works. For the meantime, please disregard the upload/update image features when creating/editing users or items.
 2. For the meantime, dummy images are used.
-
-## Dummy Data
-1. For http://localhost:3000/ or the registration page:
-### User 1
-**E-mail Address:** gabminamedez@gmail.com
-
-**Name:** Gab Minamedez
-
-**Profile Picture:** DISREGARD FOR NOW
-
-**Username:** gabminamedez
-
-**Password:** dragon
-
-**Description:** chaeyoung numbah wan
-
-### User 2
-**E-mail Address:** anjantio@gmail.com
-
-**Name:** Anjelo
-
-**Profile Picture:** DISREGARD FOR NOW
-
-**Username:** anjelo36
-
-**Password:** jollibee
-
-**Description:** i sell blackpink merch yay
-
-### User 3
-**E-mail Address:** jsunpayco@gmail.com
-
-**Name:** Julian Sunpayco
-
-**Profile Picture:** DISREGARD FOR NOW
-
-**Username:** soonpayko
-
-**Password:** mamamo
-
-**Description:** i love korea
-
-2. For http://localhost:3000/item_add or the add item page:
-### Item 1
-**Item Name:** chae pc
-
-**Price:** 245
-
-**Artist:** Twice
-
-**Item Type:** Photocards
-
-**Description:** very good
-
-### Item 2
-**Item Name:** BTS Map of the Soul: Persona
-
-**Price:** 1000
-
-**Artist:** bts
-
-**Item Type:** Albums
-
-**Description:** Fresh from Korea, bought in January.
-
-### Item 3
-**Item Name:** Jennie Kim jacket
-
-**Price:** 1500
-
-**Artist:** Blackpink
-
-**Item Type:** Apparel
-
-**Description:** Original adidas jacket from BGC
-
-### Item 4
-**Item Name:** GOT7 lightstick
-
-**Price:** 700
-
-**Artist:** GOT7
-
-**Item Type:** Lightsticks
-
-**Description:** bought after concert lol
-
-### Item 5
-**Item Name:** Love Shot Chanyeol Photocard
-
-**Price:** 245
-
-**Artist:** EXO
-
-**Item Type:** Photocards
-
-**Description:** good condition
-
-### Item 6
-**Item Name:** Tzuyu Photobook
-
-**Price:** 1200
-
-**Artist:** Twice
-
-**Item Type:** Books
-
-**Description:** we stan a talented visual maknae
