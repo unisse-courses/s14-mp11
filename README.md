@@ -28,14 +28,14 @@ K-Penguin is a machine project for the subject CCAPDEV. This is an online shop f
 
 ## Instructions for deployed web application use:
 1. Open a web browser.
-2. In the address bar, enter kpenguin.herokuapp.com to access the web application.
+2. In the address bar, enter <ins>kpenguin.herokuapp.com</ins> to access the web application.
 
 ## Web Application Pages Guide
 1. **/artist/:artist** is the page for an artist along with a list of items attributed for a specified artist.
 2. **/item_type/:itemType** is the page for an item type along with a list of items attributed for a specified item type.
 3. **/artists** is the page that displays all artists that have items attributed under them.
 4. **/items** is the page that displays all item types that have items attributed under them.
-5.**/item/:id** is the page that displays the details of an item, including a transaction form at the bottom for buyers to fill up.
+5. **/item/:id** is the page that displays the details of an item, including a transaction form at the bottom for buyers to fill up.
 6. **/item_add** is the page only accessible by a logged in user from their user profile in which they can add items to sell.
 7. **/item_edit/:id** is the page only accessible by a logged in user from an item profile in which they posted. This is to edit an existing item.
 8. **/item_delete/:id** is the page only accessible by a logged in user from editing an item they posted. This is to delete an existing item.
