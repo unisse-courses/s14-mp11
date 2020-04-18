@@ -19,7 +19,7 @@
         </div>
         <div class="container" id="navbar">
             <div class="row">
-                <div class="col-md-1.5"><a href="/user/<%= currentUser._id %>">Home</a></div>
+                <div class="col-md-1.5"><a href="/user/<%= currentUser._id %>">Profile</a></div>
                 <div class="col-md-1.5"><a href="/transactions">Transactions</a></div>
                 <div class="col-md-1.5"><a href="/artists">Artists</a></div>
                 <div class="col-md-1.5"><a href="/items">Items</a></div>
@@ -58,8 +58,10 @@
             <hr>
             <input type="submit" class="btn btn-default" value="Apply Changes">
         </form>
+        <br>
+        <p><a href='/item/<%= item._id %>'><button type="button" class="btn btn-default">Cancel</button></a></p>
         <hr>
-            <p><a href='/item_delete/<%= item._id %>'><button type="button" class="btn btn-danger" accept="image/jpg,image/png,image/jpeg">Delete Item</button></a></p>
+            <p><a href='/item_delete/<%= item._id %>'><button type="button" class="btn btn-danger">Delete Item</button></a></p>
         </div>
     </div>
 

@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-    <link href="/css/itemEdit_style.css" rel="stylesheet" type="text/css">
+    <link href="/css/artist_style.css" rel="stylesheet" type="text/css">
 
     <title><%= title %></title>
 </head>
@@ -19,7 +19,7 @@
         </div>
         <div class="container" id="navbar">
             <div class="row">
-                <div class="col-md-1.5"><a href="/user/<%= currentUser._id %>">Home</a></div>
+                <div class="col-md-1.5"><a href="/user/<%= currentUser._id %>">Profile</a></div>
                 <div class="col-md-1.5"><a href="/transactions">Transactions</a></div>
                 <div class="col-md-1.5"><a href="/artists">Artists</a></div>
                 <div class="col-md-1.5"><a href="/items">Items</a></div>
@@ -48,6 +48,7 @@
             <hr>
             <p><input type="submit" class="btn btn-danger" value="Delete Item"></p>
         </form>
+        <p><a href='/item_edit/<%= item._id %>'><button type="button" class="btn btn-default">Cancel</button></a></p>
         </div>
     </div>
 
