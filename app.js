@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const bcrypt = require('bcrypt');
 
 const app = express();
 const port = process.env.PORT|| 3000;
@@ -137,7 +138,12 @@ app.get('/item_delete/:id', function(req, res){
 
 app.post('/item_delete/:id', function(req, res){
     User.findOne({_id: loggedUser}, function(err, user){
-        if(req.body.password != user.password){
+        if(bcrypt.compareSync(req.body.password, user.password)){
+            Item.findOneAndDelete({_id: req.params.id}, function(err, item){
+                res.redirect('/user/' + loggedUser);
+            });
+        }
+        else{
             Item.findOne({_id: req.params.id}, function(err, item){
                 res.render('itemDelete.ejs', {
                     title: "K-Penguin | Delete Item",
@@ -145,11 +151,6 @@ app.post('/item_delete/:id', function(req, res){
                     currentUser: loggedUser,
                     error: "The password you entered is wrong!"
                 });
-            });
-        }
-        else{
-            Item.findOneAndDelete({_id: req.params.id}, function(err, item){
-                res.redirect('/user/' + loggedUser);
             });
         }
     });
@@ -274,6 +275,8 @@ app.post('/', function(req, res){
                         description: req.body.registerDescription,
                         image: req.body.registerImage
                     });
+
+                    newUser.password = bcrypt.hashSync(newUser.password, 10);
                     
                     newUser.save(function(err){
                         if (err) throw err;
@@ -296,9 +299,9 @@ app.get('/login', function(req, res){
 });
 
 app.post('/login', function(req, res){
-    User.findOne({username: req.body.loginUsername, password: req.body.loginPassword}, function(err, user){
+    User.findOne({username: req.body.loginUsername}, function(err, user){
         if(err) throw err;
-        
+
         if(!user){
             res.render('login.ejs', {
                 title: "K-Penguin | Welcome!",
@@ -306,9 +309,17 @@ app.post('/login', function(req, res){
             });
         }
         else{
-            loggedUser = user._id;
-            req.params.id = loggedUser;
-            res.redirect('/user/'+ loggedUser);
+            if(bcrypt.compareSync(req.body.loginPassword, user.password)){
+                loggedUser = user._id;
+                req.params.id = loggedUser;
+                res.redirect('/user/'+ loggedUser);
+            }
+            else{
+                res.render('login.ejs', {
+                    title: "K-Penguin | Welcome!",
+                    error: "Oops! That username/password combination doesn't exist."
+                });
+            }
         }
     });
 });

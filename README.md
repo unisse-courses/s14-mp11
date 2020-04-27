@@ -50,4 +50,4 @@ K-Penguin is a machine project for the subject CCAPDEV. This is an online shop f
 ## Project Notes
 1. The image storing/rendering through MongoDB is still currently in the works. For the meantime, please disregard the upload/update image features when creating/editing users or items.
 2. For the meantime, dummy images are used.
-3. You may choose to create a new account from start up. For an already pre-made account, you may go to the login page with the following credentials: **Username = gabminamedez Password = dragon**
+3. You may choose to create a new account from start up. For an already pre-made account, you may go to the login page with the following sample credentials: **Username = gabminamedez Password = dragon** or **Username = anjelo36 Password = jollibee** or **Username = soonpayko Password = mamamo**
