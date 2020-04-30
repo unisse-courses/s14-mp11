@@ -35,8 +35,8 @@
             <p id="error"><%= error %></p>
         <form method="post">
             <div class="form-group"><label>Name</label><input name="name" type="text" class="form-control" value="<%= user.name %>"></div>
-            <div class="form-group"><label>Password</label><input name="password1" type="password" class="form-control" value="<%= user.password %>"></div> 
-            <div class="form-group"><label>Re-type Password</label><input name="password2" type="password" class="form-control"></div> 
+            <div class="form-group"><label>Password</label><input name="password1" type="password" class="form-control" placeholder="Enter your password"></div> 
+            <div class="form-group"><label>Re-type Password</label><input name="password2" type="password" class="form-control" placeholder="Re-type your password"></div> 
             <div class="form-group"><label>Description</label><textarea name="userDescription" class="form-control" ><%= user.description %></textarea></div>
             <hr>
             <p><input type="submit" class="btn btn-default" value="Apply Changes"></p>

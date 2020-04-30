@@ -19,7 +19,7 @@
         </div>
         <div class="container" id="navbar">
             <div class="row">
-                <div class="col-md-1.5"><a href="/user/<%= currentUser %>">Profile</a></div>
+                <div class="col-md-1.5"><a href="/user/<%= currentUser._id %>">Profile</a></div>
                 <div class="col-md-1.5"><a href="/transactions">Transactions</a></div>
                 <div class="col-md-1.5"><a href="/artists">Artists</a></div>
                 <div class="col-md-1.5"><a href="/items">Items</a></div>
@@ -42,7 +42,7 @@
                         <p><strong>Artist: </strong><a id="itemArtist" href="/artist/<%= item.artist.toLowerCase() %>"><%= item.artist %></a></p>
                         <p><strong>Item Type: </strong><a id="itemType" href="/item_type/<%= item.itemType.toLowerCase() %>"><%= item.itemType.toUpperCase() %></a></p>
                     <hr>
-                    <% if(item.user.id.toString().trim() === currentUser.toString().trim()){ %>
+                    <% if(item.user.id.toString().trim() === currentUser._id.toString().trim()){ %>
                         <p><a href='/item_edit/<%= item._id %>'><button type="button" class="btn btn-default">Edit Item</button></a></p>
                     <% } else{ %>
                         <h2>Order Form</h2>

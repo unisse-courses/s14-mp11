@@ -43,7 +43,7 @@
                     <hr>
                     <h2>Description</h2>
                         <p id="userDescription"><%= user.description %></p>
-                    <% if(user._id.toString().trim() === currentUser.toString().trim()){ %>
+                    <% if(user._id.toString().trim() === currentUser._id.toString().trim()){ %>
                         <hr>
                         <p> <button onclick="window.location.href = '/user_edit';" type="submit" class="btn btn-default">Edit Profile</button>
                             <button onclick="window.location.href = '/item_add';" type="submit" class="btn btn-default">Add Item</button>
